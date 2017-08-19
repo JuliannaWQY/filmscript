@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>fullPage.js One Page Scroll sections Site Plugin</title>
+    <meta name="author" content="Alvaro Trigo Lopez" />
+    <meta name="description" content="fullPage plugin by Alvaro Trigo. Create fullscreen pages fast and simple. One page scroll sections jquery plugin. Mouse snap." />
+    <meta name="keywords" content="fullpage,jquery,alvaro,trigo,plugin,fullscren,screen,full,iphone5,snap,snapping,apple,scroll,sections" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta property="og:title" content="fullPage scroll snapping. Create full screen pages fast and simple">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="fullPage plugin by Alvaro Trigo. Mouse wheel snap to sections. Fast and simple to use.">
+    <meta property="og:image" content="https://raw.github.com/alvarotrigo/fullPage.js/master/examples/imgs/intro.png">
+    <meta property="og:url" content="https://alvarotrigo.com/fullPage/">
+    <meta name="twitter:card" content="photo">
+    <meta name="twitter:site" content="@imac2">
+    <meta name="twitter:creator" content="@imac2">
+    <meta name="twitter:title" content="fullPage.js">
+    <meta name="twitter:description" content="Great Javascript library to create fullscreen scrolling websites">
+    <meta name="twitter:image" content="https://alvarotrigo.com/fullPage/imgs/share.png">
+    <meta name="twitter:url" content="https://alvarotrigo.com/fullPage/">
+    <meta name="Resource-type" content="Document" />
+    <link rel="stylesheet" type="text/css" href="jquery.fullpage.min.css" />
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="https://alvarotrigo.com/fullPage/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="https://alvarotrigo.com/fullPage/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://alvarotrigo.com/fullPage/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="https://alvarotrigo.com/fullPage/favicons/manifest.json">
+    <link rel="mask-icon" href="https://alvarotrigo.com/fullPage/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="https://alvarotrigo.com/fullPage/favicons/favicon.ico">
+    <meta name="apple-mobile-web-app-title" content="fullPage.js">
+    <meta name="application-name" content="fullPage.js">
+    <meta name="msapplication-config" content="https://alvarotrigo.com/fullPage/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <style>
+        #examplesList,
+        caption,
+        th {
+            text-align: left
+        }
+        
+        blockquote,
+        body,
+        dd,
+        div,
+        dl,
+        dt,
+        fieldset,
+        form,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        input,
+        li,
+        ol,
+        p,
+        pre,
+        td,
+        textarea,
+        th,
+        ul {
+            margin: 0;
+            padding: 0
+        }
+        
+        #download a,
+        #fullPage-nav li a,
+        #menu li a,
+        a {
+            text-decoration: none
+        }
+        
+        #download,
+        #download:hover {
+            text-shadow: 0 -1px 0 rgba(0, 0, 0, .25)
+        }
+        
+        .section,
+        .wrap {
+            position: relative
+        }
+        
+        table {
+            border-spacing: 0
+        }
+        
+        abbr,
+        acronym,
+        fieldset,
+        img {
+            border: 0
+        }
+        
+        address,
+        caption,
+        cite,
+        code,
+        dfn,
+        em,
+        strong,
+        th,
+        var {
+            font-weight: 400;
+            font-style: normal
+        }
+        
+        strong {
+            font-weight: 700
+        }
+        
+        ol,
+        ul {
+            list-style: none
+        }
+        
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: 400;
+            font-size: 100%;
+            color: #444
+        }
+        
+        body,
+        h2 {
+            color: #333;
+            color: rgba(0, 0, 0, .5)
+        }
+        
+        q:after,
+        q:before {
+            content: ''
+        }
+        
+        body {
+            font-family: arial, helvetica;
+            background-color: #1BBC9B
+        }
+        
+        body,
+        html {
+            overflow: hidden
+        }
+        
+        #fullpage,
+        .section,
+        body,
+        html {
+            height: 100%
+        }
+        
+        .wrap {
+            margin-left: auto;
+            margin-right: auto;
+            width: 960px
+        }
+        
+        h1 {
+            font-size: 6em
+        }
+        
+        h2,
+        p {
+            font-size: 2em
+        }
+        
+        .section {
+            text-align: center
+        }
+        
+        .twitter-share-button {
+            position: fixed!important;
+            z-index: 99;
+            right: 149px
+        }
+        
+        #infoMenu,
+        #menu {
+            z-index: 70;
+            position: fixed
+        }
+        
+        #github-stars-button {
+            padding-top: 20px;
+            margin: 0 auto
+        }
+        
+        #menu li {
+            display: inline-block;
+            margin: 10px;
+            color: #000;
+            background: #fff;
+            background: rgba(255, 255, 255, .5);
+            -webkit-border-radius: 10px;
+            border-radius: 10px
+        }
+        
+        #menu li.active {
+            background: #666;
+            background: rgba(0, 0, 0, .5);
+            color: #fff
+        }
+        
+        #menu li a,
+        #menu li.active a:hover {
+            color: #000
+        }
+        
+        #donations a:hover,
+        #download,
+        #menu li.active a {
+            color: #fff
+        }
+        
+        #menu li:hover {
+            background: rgba(255, 255, 255, .8)
+        }
+        
+        #menu li a,
+        #menu li.active a {
+            padding: 9px 18px;
+            display: block
+        }
+        
+        #examplesList ul,
+        #menu {
+            padding: 0
+        }
+        
+        #examplesList ul li a:hover,
+        #infoMenu {
+            color: #f2f2f2
+        }
+        
+        #menu {
+            top: 0;
+            left: 0;
+            height: 40px;
+            width: 100%;
+            margin: 0
+        }
+        
+        #usedBy {
+            background-image: url(imgs/used-by-fullpage.png?v=2);
+            margin: 50px auto 0;
+            display: block;
+            height: 127px;
+            width: 402px
+        }
+        
+        #section0 img,
+        #section1 img {
+            margin: 20px 0 0
+        }
+        
+        #section2 img {
+            margin: 20px 0 0 52px
+        }
+        
+        #section3 img {
+            bottom: 0;
+            position: absolute;
+            margin-left: -420px
+        }
+        
+        .intro p {
+            width: 50%;
+            margin: 0 auto;
+            font-size: 1.5em
+        }
+        
+        .twitter-share-button {
+            top: 9px
+        }
+        
+        #fullPage-nav {
+            position: absolute;
+            z-index: 100;
+            margin-top: -32px;
+            top: 50%;
+            opacity: 1
+        }
+        
+        #fullPage-nav li {
+            display: block;
+            width: 14px;
+            height: 13px;
+            margin: 7px
+        }
+        
+        #fullPage-nav li a {
+            display: block;
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            cursor: pointer
+        }
+        
+        #fullPage-nav li .active span {
+            background: #333
+        }
+        
+        #fullPage-nav span {
+            top: 2px;
+            left: 2px;
+            width: 8px;
+            height: 8px;
+            border: 1px solid #000;
+            background: rgba(0, 0, 0, 0);
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            position: absolute;
+            z-index: 1
+        }
+        
+        .button {
+            margin: 20px 15px 0 0;
+            vertical-align: middle;
+            display: inline-block
+        }
+        
+        .button a {
+            color: #fff;
+            background: #316f68;
+            padding: 15px 30px;
+            border-radius: 5px;
+            display: block
+        }
+        
+        .button a:hover {
+            color: #316f68;
+            background-color: #fff
+        }
+        
+        #infoMenu {
+            height: 20px;
+            bottom: 0;
+            width: 100%;
+            text-align: right;
+            font-size: .9em;
+            padding: 8px 0
+        }
+        
+        #infoMenu li a {
+            display: block;
+            margin: 0 22px 0 0;
+            color: #333
+        }
+        
+        #infoMenu li a:hover {
+            text-decoration: underline
+        }
+        
+        #infoMenu li {
+            display: inline-block;
+            position: relative
+        }
+        
+        #examplesList {
+            display: none;
+            background: #282828;
+            -webkit-border-radius: 6px;
+            -moz-border-radius: 6px;
+            border-radius: 6px;
+            padding: 20px;
+            float: left;
+            position: absolute;
+            bottom: 29px;
+            right: 0;
+            width: 822px
+        }
+        
+        #examplesList ul li {
+            display: block;
+            margin: 5px 0
+        }
+        
+        #examplesList ul li a {
+            color: #BDBDBD;
+            margin: 0
+        }
+        
+        #examplesList .column {
+            float: left;
+            margin: 0 20px 0 0
+        }
+        
+        #examplesList h3 {
+            color: #f2f2f2;
+            font-size: 1.2em;
+            margin: 0 0 15px;
+            border-bottom: 1px solid rgba(0, 0, 0, .4);
+            -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, .1);
+            -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, .1);
+            box-shadow: 0 1px 0 rgba(255, 255, 255, .1);
+            padding: 0 0 5px
+        }
+        
+        #donations a {
+            color: #333;
+            color: rgba(0, 0, 0, .5);
+            font-size: 80%
+        }
+        
+        #supportedBy {
+            position: absolute;
+            left: 30px;
+            bottom: 30px;
+            z-index: 101
+        }
+        
+        #supportedBy a img {
+            display: block;
+            margin: 0;
+            border: 0
+        }
+        
+        #supportedBy div {
+            margin: 0 0 4px;
+            display: block;
+            font-size: 13px;
+            text-align: left
+        }
+        
+        #section0 #logo {
+            max-width: 282px
+        }
+        
+        #y-theme {
+            position: fixed;
+            bottom: 40px;
+            right: 20px
+        }
+        
+        @media screen and (max-width:990px) {
+            #y-theme {
+                display: none
+            }
+        }
+        
+        @media screen and (max-height:770px) {
+            #section0 #logo {
+                max-width: 250px!important;
+                height: auto!important
+            }
+            #section0 #usedBy {
+                padding: 10px 0 0;
+                height: 60px;
+                width: 398px;
+                margin-top: 40px;
+                background-size: cover
+            }
+            #section3 img {
+                bottom: -67px
+            }
+        }
+        
+        @media screen and (max-height:680px) {
+            #section0 #usedBy {
+                margin-top: 15px;
+                height: 41px;
+                width: 308px;
+                background-size: cover
+            }
+            #section0 #logo {
+                max-width: 200px!important;
+                height: auto!important
+            }
+            #section3 img {
+                bottom: -100px
+            }
+        }
+        
+        @media screen and (max-height:580px) {
+            #section0 #logo {
+                max-width: 150px!important;
+                height: auto!important
+            }
+            h1 {
+                font-size: 4.5em
+            }
+            h2 {
+                font-size: 1.3em
+            }
+            #donations a {
+                font-size: 57%
+            }
+            #section3 img {
+                bottom: -180px
+            }
+            .intro p {
+                font-size: 1.1em
+            }
+        }
+        
+        @media screen and (max-height:480px) {
+            #logo,
+            #usedBy {
+                display: none
+            }
+        }
+        
+        @media all and (max-width:900px) {
+            #usedBy {
+                padding: 0
+            }
+        }
+        
+        @media all and (max-width:890px) {
+            #twitter-widget-0 {
+                left: 20px;
+                top: 63px
+            }
+            #section3 img {
+                margin: 0 auto;
+                left: 0;
+                max-width: 600px;
+                height: auto!important;
+                right: 0
+            }
+            #section1 #slidersImg {
+                max-width: 462px;
+                height: auto!important
+            }
+            #menu li {
+                margin: 5px
+            }
+            #menu li a,
+            #menu li.active a {
+                padding: 9px 12px
+            }
+        }
+        
+        @media all and (max-width:650px) {
+            #menu {
+                z-index: 9999
+            }
+            #menu li {
+                margin: 3px
+            }
+            #menu li a,
+            #menu li.active a {
+                padding: 9px 12px
+            }
+            #section3 img {
+                margin: 0 auto;
+                left: 0;
+                max-width: 450px;
+                height: auto!important;
+                right: 0
+            }
+            #section2 img {
+                margin: 20px 0 0
+            }
+            .intro p {
+                font-size: 1.1em
+            }
+            #usedBy {
+                width: 310px!important;
+                height: 46px!important;
+                background-size: cover!important;
+                background-repeat: no-repeat
+            }
+        }
+        
+        @media all and (max-width:580px) {
+            #menu li a,
+            #menu li.active a {
+                padding: 8px 11px;
+                font-size: 13px
+            }
+            #supportedBy {
+                display: none
+            }
+            #section1 #slidersImg,
+            #section2 #easyToUse {
+                max-width: 350px;
+                height: auto!important
+            }
+            .intro p {
+                width: 75%
+            }
+            h1 {
+                font-size: 2.7em
+            }
+            h2 {
+                font-size: 1.1em
+            }
+            #infoMenu {
+                text-align: center
+            }
+            #infoMenu ul {
+                display: inline-block;
+                padding: 0
+            }
+            #infoMenu li a {
+                margin: 0 10px 0 0
+            }
+        }
+        
+        @media all and (max-width:480px) {
+            #section3 img {
+                margin: 0 auto;
+                left: 0;
+                max-width: 300px;
+                height: auto!important;
+                right: 0
+            }
+            #twitter-widget-0 {
+                display: none
+            }
+        }
+        
+        @media all and (max-width:450px) {
+            #menu {
+                display: none
+            }
+            .intro p {
+                font-size: 1em
+            }
+            #infoMenu {
+                bottom: 21px
+            }
+        }
+        
+        @media screen and (max-width:890px) and (max-height:680px) {
+            #section3 img {
+                bottom: -50px
+            }
+        }
+        
+        @media screen and (max-width:650px) and (max-height:680px) {
+            #section3 img {
+                bottom: 0
+            }
+        }
+        
+        @media screen and (max-width:580px) and (max-height:580px) {
+            #section3 img {
+                bottom: -50px
+            }
+        }
+        
+        @media screen and (max-width:500px) and (max-height:500px) {
+            #section3 img {
+                bottom: 0
+            }
+        }
+    </style>
+
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-94005074-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+
+    <!--[if IE]>
+        <script type="text/javascript">
+             var console = { log: function() {} };
+        </script>
+    <![endif]-->
+
+</head>
+
+<body>
+    <script>
+        ! function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0],
+                p = /^http:/.test(d.location) ? 'http' : 'https';
+            if (!d.getElementById(id)) {
+                js = d.createElement(s);
+                js.id = id;
+                js.src = p + '://platform.twitter.com/widgets.js';
+                fjs.parentNode.insertBefore(js, fjs);
+            }
+        }(document, 'script', 'twitter-wjs');
+    </script>
+
+    <ul id="menu">
+        <li data-menuanchor="firstPage" class="active"><a href="#firstPage">First section</a></li>
+        <li data-menuanchor="secondPage"><a href="#secondPage">Second section</a></li>
+        <li data-menuanchor="3rdPage"><a href="#3rdPage">Third section</a></li>
+        <li data-menuanchor="4thpage"><a href="#4thpage">Fourth section</a></li>
+    </ul>
+
+    <div id="fullpage">
+
+        <div class="section active" id="section0">
+            <h1>fullPage.js</h1>
+            <h2>Create Beautiful Fullscreen Scrolling Websites</h2>
+            <div id="github-stars-button">
+                <a class="github-button" href="https://github.com/alvarotrigo/fullpage.js" data-icon="octicon-star" data-style="mega" data-count-href="/alvarotrigo/fullpage.js/stargazers" data-count-api="/repos/alvarotrigo/fullpage.js#stargazers_count" data-count-aria-label="# stargazers on GitHub"
+                    aria-label="Star alvarotrigo/fullpage.js on GitHub">Star</a>
+            </div>
+            <div class="button" id="download"><a href="https://github.com/alvarotrigo/fullpage.js/archive/master.zip">Download</a></div><br />
+
+            <img src="imgs/fullPage.png" alt="fullPage" height="243" width="282" id="logo" />
+            <p id="donations">
+                <a href="extensions/">fullpage.js Extensions</a>
+            </p>
+
+            <div id="usedBy"></div>
+
+            <!-- <div id="supportedBy">
+                <div>Supported by:</div>
+                <a href="https://www.browserstack.com/">
+                    <img src="http://wallpapers-for-ipad.com/fullpage/imgs3/logos/browserstack2.png" width="130" height="31" alt="Browserstack" />
+                </a>
+            </div> -->
+
+        </div>
+        <div class="section" id="section1">
+            <div class="slide active">
+                <div class="intro">
+                    <h1>Create Sliders</h1>
+                    <p>Not only vertical scrolling but also horizontal scrolling. With fullPage.js you will be able to add horizontal sliders in the most simple way ever.</p>
+                    <img data-src="imgs/slider.png" alt="slider" height="132" width="662" id="slidersImg" />
+                </div>
+
+            </div>
+            <div class="slide">
+                <div class="intro">
+                    <img data-src="imgs/1.png" alt="simple" height="176" width="176" />
+                    <h1>Simple</h1>
+                    <p>Easy to use. Configurable and customizable.</p>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="intro">
+                    <img data-src="imgs/2.png" alt="Cool" height="176" width="176" />
+                    <h1>Cool</h1>
+                    <p>It just looks cool. Impress everybody with a simple and modern web design!</p>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="intro">
+                    <img data-src="imgs/3.png" alt="Compatible" height="176" width="176" />
+                    <h1>Compatible</h1>
+                    <p>Working in modern and old browsers too! It's not IE 8 users' fault having to use that horrible browser! Lets give them a chance to see your site in a proper way!</p>
+                </div>
+            </div>
+        </div>
+        <div class="section" id="section2">
+            <div class="intro">
+                <h1>Easy to use plugin</h1>
+                <p>HTML markup example to define 4 sections.</p>
+                <img data-src="imgs/example2.png" alt="example" height="154" width="494" id="easyToUse" />
+            </div>
+        </div>
+        <div class="section" id="section3">
+            <div class="intro">
+                <h1>Working On Tablets</h1>
+                <p>
+                    Designed to fit different screen sizes as well as tablet and mobile devices.
+                    <br /><br /><br /><br /><br /><br />
+                </p>
+            </div>
+            <img data-src="imgs/tablets.png" alt="tablets" height="372" width="843" />
+        </div>
+    </div>
+
+    <div id="infoMenu">
+        <ul>
+            <li><a href="https://alvarotrigo.com/fullPage/utils/wordpress.html">Wordpress theme</a></li>
+            <li><a href="https://github.com/alvarotrigo/fullPage.js/archive/master.zip">Download</a></li>
+            <li>
+                <a href="#" id="showExamples">Examples</a>
+                <div id="examplesList">
+                    <div class="column">
+                        <h3>Navigation</h3>
+                        <ul>
+                            <li><a href="examples/scrollBar.html">Scroll Bar Enabled</a></li>
+                            <li><a href="examples/normalScroll.html">Normal scrolling</a></li>
+                            <li><a href="examples/continuous.html">Continuous vertical</a></li>
+                            <li><a href="examples/noAnchor.html">Without anchor links (same URL)</a></li>
+                            <li><a href="examples/navigationV.html">Vertical navigation dots</a></li>
+                            <li><a href="examples/navigationH.html">Horizontal navigation dots</a></li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <h3>Design</h3>
+                        <ul>
+                            <li><a href="examples/responsive.html">Responsive</a></li>
+                            <li><a href="examples/backgrounds.html">Full backgrounds</a></li>
+                            <li><a href="examples/videoBackground.html">Full background videos</a></li>
+                            <li><a href="examples/autoHeight.html">Auto-height sections</a></li>
+                            <li><a href="examples/gradientBackgrounds.html">Gradient backgrounds</a></li>
+                            <li><a href="examples/scrolling.html">Scrolling inside sections and slides</a></li>
+                            <li><a href="examples/fixedHeaders.html">Adding fixed header and footer</a></li>
+                            <li><a href="examples/oneSection.html">One single section</a></li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <h3>Extensions</h3>
+                        <ul>
+                            <li><a href="extensions/parallax.html">Parallax</a></li>
+                            <li><a href="extensions/continuous-horizontal.html">Continuous horizontal</a></li>
+                            <li><a href="extensions/interlocked-slides.html">Interlocked Slides</a></li>
+                            <li><a href="extensions/reset-sliders.html">Reset Sliders</a></li>
+                            <li><a href="extensions/responsive-slides.html">Responsive Slides</a></li>
+                            <li><a href="extensions/scroll-horizontally.html">Horizontal mouse wheel</a></li>
+                            <li><a href="extensions/fading-effect.html">Fading Effect</a></li>
+                            <li><a href="extensions/offset-sections.html">Offset sections</a></li>
+                            <li><a href="extensions/drag-and-move.html">Drag and move</a></li>
+                            <li><a href="extensions/scrolloverflow-reset.html">ScrollOverflow reset</a></li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <h3>Other</h3>
+                        <ul>
+                            <li><a href="examples/apple.html">Animations on scrolling</a></li>
+                            <li><a href="examples/callbacks.html">Callbacks</a></li>
+                            <li><a href="examples/methods.html">Functions and methods</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </li>
+            <li><a href="https://github.com/alvarotrigo/fullPage.js#fullpagejs">Documentation</a></li>
+            <li><a href="https://alvarotrigo.com/#contact-page">Contact</a></li>
+            <li><a href="https://twitter.com/IMAC2">Twitter</a></li>
+        </ul>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.fullPage.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#fullpage').fullpage({
+                sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
+                anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
+                menu: '#menu',
+                css3: true,
+                scrollingSpeed: 1000
+            });
+
+            $('#showExamples').click(function(e) {
+                e.stopPropagation();
+                e.preventDefault();
+                $('#examplesList').toggle();
+            });
+
+            $('html').click(function() {
+                $('#examplesList').hide();
+            });
+        });
+    </script>
+    <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
+</body>
+
+</html>
