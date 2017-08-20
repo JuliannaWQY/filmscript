@@ -719,44 +719,56 @@
 
         <div class="section active" id="section0">
             <h1>From ... to ...</h1>
-            <h2>Visualizaing the data of movie-scripts' censorship in China</h2>
+            <h2>Visualising China's movie-script censorship and keyword trend in six years.</h2>
             <div id="github-stars-button">
             </div>
             <div class="button" id="download"><a href="https://github.com/alvarotrigo/fullpage.js/archive/master.zip">Download</a></div><br />
         </div>
-        <div class="section" id="section1">
-            <h1>Some Big Data</h1>
-            <h2><i>From 2011 to 2016: </i></h2>
-            <div class="row">
-                <div class="col-md-1">
-                </div>
-                <div class="col-md-10">
-                    <p>
-                        Averagly <span id="emphasizs">3000</span> scripts were submitted per year to the The State Administration of Radio Film and Television. In Total <strong style="font-size:1.5em">18033</strong> movie-scripts.</p>
-                    <p>Among them, <span id='emphasizs'>86%</span> were <i>feature movies</i>. Others were cartoon, documentories, educational movies and special usage movies.<strong style="font-size:1.5em">11225</strong> script writers and <strong style="font-size:1.5em">9552</strong>                        production companies were involved.</p>
-                </div>
-                <div class="col-md-1">
+        <div class="section" id="section1" style="color:black">
+            <div class="slide active">
+                <h1 style="color:black">Background</h1>
+                <p class="row">
+                    <div class="col-md-1">
+                    </div>
+                    <div class="col-md-10">
+                        <p>In China, in order to be able to screening publicly, any kind of movies/videos would need to get the permission from The State Administration of Radio Film and Television.</p>
+                        <p> The review of movie-script is part of the process, in which a summary or the full text of script has to be submitted to the relavent department. For those plots that involves national minorities, history, police &amp; army or any
+                            other senstive materials, the authority would advice the author to change or modify them.</p>
+                        <p> After few weeks or longer time depending on the modification process, a script would receive three kinds of results for its application: Approved, Approved with modification or Approved in principle, which is an euphemism of the
+                            problems that are not completly "wrong".</p>
+                    </div>
+                    <div class="col-md-1">
+                    </div>
+                </p>
+            </div>
+            <div class="slide">
+                <h1 style="color:black">Some Big Data</h1>
+                <h2 style="color:black"><i>From 2011 to 2016: </i></h2>
+                <div class="row">
+                    <div class="col-md-1">
+                    </div>
+                    <div class="col-md-10">
+                        <p>
+                            Averagly <span id="emphasizs">3000</span> scripts were submitted per year to the The State Administration of Radio Film and Television. In Total <strong style="font-size:1.5em">18033</strong> movie-scripts.</p>
+                        <p>Among them, <span id='emphasizs'>86%</span> were <i>feature movies</i>. Others were cartoon, documentories, educational movies and special usage movies.<strong style="font-size:1.5em">11225</strong> script writers and
+                            <strong style="font-size:1.5em">9552</strong> production companies were involved.</p>
+                    </div>
+                    <div class="col-md-1">
+                    </div>
                 </div>
             </div>
         </div>
         <div class="section" id="section2">
-            <div class="intro">
-                <h1>Easy to use plugin</h1>
-                <p>HTML markup example to define 4 sections.</p>
-                <img data-src="imgs/example2.png" alt="example" height="154" width="494" id="easyToUse" />
-            </div>
-        </div>
-        <div class="section" id="section3">
             <div class="slide active">
                 <div class="intro">
-                    <h1></h1>
-                    <p></p>
+                    <h1>Changes &amp; Those Who were Changed</h1>
+                    <p>The filter were eased through the years. Foreign co-operated movies used to be the biggest target for censorship.</p>
                 </div>
             </div>
             <div class="slide">
                 <div class="intro">
-                    <h2>Movie-Scripts in Types and Review Results</h2>
-                    <p class="row">
+                    <h2>Movie-Scripts in Types and Review Results in %</h2>
+                    <div class="row">
                         <div class="col-md-2">
                         </div>
                         <div id="chart1" class="col-md-8" style="margin-right: 5%; width:900px;height:400px;">
@@ -764,7 +776,7 @@
                                 var myChart = echarts.init(document.getElementById('chart1'));
                                 var timeLineData = [2011, 2012, 2013, 2014, 2015, 2016];
                                 var yData = ['Special usage movies', 'Feature Movies', 'Foreign co-production \n Movies', 'Documentories', 'Scientific & Educational \n  Movies', 'Cartoon'];
-                                var WLData = ['Agreed', 'Agree with Modification', 'Agreed in  Principle'];
+                                var WLData = ['Approved', 'Approved with Modification', 'Approved in Principle'];
                                 AGData = {
                                         2011: [96, 86, 38, 95, 100, 100],
                                         2012: [94, 87, 41, 97, 100, 100],
@@ -961,7 +973,9 @@
                         </div>
                         <div class="col-md-2">
                         </div>
-                    </p>
+                    </div>
+                    <br>
+                    <p>The filter were loosen since 2011 while around 12% of feature movies would still be modified each year.</p>
                 </div>
             </div>
             <div class="slide">
@@ -970,7 +984,7 @@
                     <div class="row">
                         <div class="col-md-2">
                         </div>
-                        <p id="chart2" class="col-md-8" style="margin-left: 5%; width:800px;height:400px;">
+                        <div id="chart2" class="col-md-8" style="margin-left: 5%; width:800px;height:400px;">
                             <script>
                                 var myChart = echarts.init(document.getElementById('chart2'));
                                 option = {
@@ -1084,18 +1098,51 @@
                                 };
                                 myChart.setOption(option)
                             </script>
-                        </p>
+                        </div>
                         <div class="col-md-2">
                         </div>
                     </div>
-                    <p>rfqwiufqiwufbquierfbuiegiuqehgi</p>
+                    <p>China's movie industry received a boom in 2014. <br>Clink on '<i>Feature Movie</i>' to see how it surpasses the rest kinds of movies.</p>
                 </div>
             </div>
             <div class="slide">
                 <div class="intro">
-                    <h1>Compatible</h1>
-                    <p>Working in modern and old browsers too! It's not IE 8 users' fault having to use that horrible browser! Lets give them a chance to see your site in a proper way!</p>
+                    <h2>Top 6 Movie Prodiction Companies that Received most Modifications</h2>
+                    <ul>
+                        <li>National Administration of Radio, Film and Television Channel Production Center (国家广播电影电视总局电影卫星频道节目制作中心)</li>
+                        <li>China Film Group Corporation (中国电影股份有限公司)</li>
+                        <li>Xiaoxiang Film Group (潇湘电影集团有限公司)</li>
+                        <li>Bona Film Group Limited (博纳影业集团有限公司)</li>
+                        <li>Le Vision Pictures (乐视影业（北京）有限公司)</li>
+                        <li>Huayi Brothers Media Group Co.,Ltd (华谊兄弟传媒股份有限公司)</li>
+                    </ul>
                 </div>
+            </div>
+            <div class="slide">
+                <div class="intro">
+                    <h2>Famous Script Writers who Received most Modifications </h2>
+                    <div class="row">
+                        <div class="col-md-2">
+                        </div>
+                        <div class="col-md-4">
+                            <img src="img/huang.jpg" style="height:100px;width:100px">
+                        </div>
+                        <div class="col-md-4" style="text-align:left">
+                            <p>Famous for: Yip Man Series</p>
+                            <p>Scripts that were modified: Yip Man 3, Bounty Hunters (赏金猎人), Magic to Win (开心魔法)
+                            </p>
+                        </div>
+                        <div class="col-md-2">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section" id="section3">
+            <div class="intro">
+                <h1>Easy to use plugin</h1>
+                <p>HTML markup example to define 4 sections.</p>
+                <img data-src="imgs/example2.png" alt="example" height="154" width="494" id="easyToUse" />
             </div>
         </div>
         <div class="section" id="section4">
