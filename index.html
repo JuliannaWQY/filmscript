@@ -3,23 +3,23 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>fullPage.js One Page Scroll sections Site Plugin</title>
-    <meta name="author" content="Alvaro Trigo Lopez" />
-    <meta name="description" content="fullPage plugin by Alvaro Trigo. Create fullscreen pages fast and simple. One page scroll sections jquery plugin. Mouse snap." />
-    <meta name="keywords" content="fullpage,jquery,alvaro,trigo,plugin,fullscren,screen,full,iphone5,snap,snapping,apple,scroll,sections" />
+    <title>China Movie-Script Data Analysis, 2011-16 - Data Visualization Project</title>
+    <meta name="author" content="JuliannaW" />
+    <meta name="description" content="What kind of movies receive the largest censorship and what are the keywords of Chinese movies in each year from 2011 to 2016" />
+    <meta name="keywords" content="movies,china,script,censorship,data,journalism,data journalism,visualization" />
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta property="og:title" content="fullPage scroll snapping. Create full screen pages fast and simple">
+    <meta property="og:title" content="China Movie-Script Data Analysis, 2011-16 - Data Visualization Project">
     <meta property="og:type" content="website">
-    <meta property="og:description" content="fullPage plugin by Alvaro Trigo. Mouse wheel snap to sections. Fast and simple to use.">
-    <meta property="og:image" content="https://raw.github.com/alvarotrigo/fullPage.js/master/examples/imgs/intro.png">
-    <meta property="og:url" content="https://alvarotrigo.com/fullPage/">
+    <meta property="og:description" content="What kind of movies receive the largest censorship and what are the keywords of Chinese movies in each year from 2011 to 2016.">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="https://juliannawqy.github.io/moviescript/">
     <meta name="twitter:card" content="photo">
-    <meta name="twitter:site" content="@imac2">
-    <meta name="twitter:creator" content="@imac2">
-    <meta name="twitter:title" content="fullPage.js">
-    <meta name="twitter:description" content="Great Javascript library to create fullscreen scrolling websites">
-    <meta name="twitter:image" content="https://alvarotrigo.com/fullPage/imgs/share.png">
-    <meta name="twitter:url" content="https://alvarotrigo.com/fullPage/">
+    <meta name="twitter:site" content="@julianna">
+    <meta name="twitter:creator" content="@julianna">
+    <meta name="twitter:title" content="China Movie Script Data Analysis, Data Visualization Project">
+    <meta name="twitter:description" content="What kind of movies receive the largest censorship and what are the keywords of Chinese movies in each year from 2011 to 2016.">
+    <meta name="twitter:image" content="">
+    <meta name="twitter:url" content="https://juliannawqy.github.io/moviescript/">
     <meta name="Resource-type" content="Document" />
     <link rel="stylesheet" type="text/css" href="jquery.fullpage.min.css" />
 
@@ -30,6 +30,12 @@
     <link rel="manifest" href="https://alvarotrigo.com/fullPage/favicons/manifest.json">
     <link rel="mask-icon" href="https://alvarotrigo.com/fullPage/favicons/safari-pinned-tab.svg" color="#5bbad5">
     <link rel="shortcut icon" href="https://alvarotrigo.com/fullPage/favicons/favicon.ico">
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/stylish-portfolio.css" rel="stylesheet">
+
     <meta name="apple-mobile-web-app-title" content="fullPage.js">
     <meta name="application-name" content="fullPage.js">
     <meta name="msapplication-config" content="https://alvarotrigo.com/fullPage/favicons/browserconfig.xml">
@@ -127,13 +133,13 @@
         h6 {
             font-weight: 400;
             font-size: 100%;
-            color: #444
+            color: #fae5c6
         }
         
         body,
         h2 {
-            color: #333;
-            color: rgba(0, 0, 0, .5)
+            color: #c4ac98;
+            color: #c4ac98
         }
         
         q:after,
@@ -168,9 +174,12 @@
             font-size: 6em
         }
         
-        h2,
-        p {
+        h2 {
             font-size: 2em
+        }
+        
+        p {
+            font-size: 1.5em
         }
         
         .section {
@@ -443,6 +452,10 @@
             right: 20px
         }
         
+        #emphasizs {
+            font-size: 3em;
+        }
+        
         @media screen and (max-width:990px) {
             #y-theme {
                 display: none
@@ -676,12 +689,8 @@
         ga('send', 'pageview');
     </script>
 
-
-    <!--[if IE]>
-        <script type="text/javascript">
-             var console = { log: function() {} };
-        </script>
-    <![endif]-->
+    <script type="text/javascript" src="js/echarts.min.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
 
 </head>
 
@@ -709,57 +718,24 @@
     <div id="fullpage">
 
         <div class="section active" id="section0">
-            <h1>fullPage.js</h1>
-            <h2>Create Beautiful Fullscreen Scrolling Websites</h2>
+            <h1>From ... to ...</h1>
+            <h2>Visualizaing the data of movie-scripts' censorship in China</h2>
             <div id="github-stars-button">
-                <a class="github-button" href="https://github.com/alvarotrigo/fullpage.js" data-icon="octicon-star" data-style="mega" data-count-href="/alvarotrigo/fullpage.js/stargazers" data-count-api="/repos/alvarotrigo/fullpage.js#stargazers_count" data-count-aria-label="# stargazers on GitHub"
-                    aria-label="Star alvarotrigo/fullpage.js on GitHub">Star</a>
             </div>
             <div class="button" id="download"><a href="https://github.com/alvarotrigo/fullpage.js/archive/master.zip">Download</a></div><br />
-
-            <img src="imgs/fullPage.png" alt="fullPage" height="243" width="282" id="logo" />
-            <p id="donations">
-                <a href="extensions/">fullpage.js Extensions</a>
-            </p>
-
-            <div id="usedBy"></div>
-
-            <!-- <div id="supportedBy">
-                <div>Supported by:</div>
-                <a href="https://www.browserstack.com/">
-                    <img src="http://wallpapers-for-ipad.com/fullpage/imgs3/logos/browserstack2.png" width="130" height="31" alt="Browserstack" />
-                </a>
-            </div> -->
-
         </div>
         <div class="section" id="section1">
-            <div class="slide active">
-                <div class="intro">
-                    <h1>Create Sliders</h1>
-                    <p>Not only vertical scrolling but also horizontal scrolling. With fullPage.js you will be able to add horizontal sliders in the most simple way ever.</p>
-                    <img data-src="imgs/slider.png" alt="slider" height="132" width="662" id="slidersImg" />
+            <h1>Some Big Data</h1>
+            <h2><i>From 2011 to 2016: </i></h2>
+            <div class="row">
+                <div class="col-md-1">
                 </div>
-
-            </div>
-            <div class="slide">
-                <div class="intro">
-                    <img data-src="imgs/1.png" alt="simple" height="176" width="176" />
-                    <h1>Simple</h1>
-                    <p>Easy to use. Configurable and customizable.</p>
+                <div class="col-md-10">
+                    <p>
+                        Averagly <span id="emphasizs">3000</span> scripts were submitted per year to the The State Administration of Radio Film and Television. In Total <strong style="font-size:1.5em">18033</strong> movie-scripts.</p>
+                    <p>Among them, <span id='emphasizs'>86%</span> were <i>feature movies</i>. Others were cartoon, documentories, educational movies and special usage movies.<strong style="font-size:1.5em">11225</strong> script writers and <strong style="font-size:1.5em">9552</strong>                        production companies were involved.</p>
                 </div>
-            </div>
-            <div class="slide">
-                <div class="intro">
-                    <img data-src="imgs/2.png" alt="Cool" height="176" width="176" />
-                    <h1>Cool</h1>
-                    <p>It just looks cool. Impress everybody with a simple and modern web design!</p>
-                </div>
-            </div>
-            <div class="slide">
-                <div class="intro">
-                    <img data-src="imgs/3.png" alt="Compatible" height="176" width="176" />
-                    <h1>Compatible</h1>
-                    <p>Working in modern and old browsers too! It's not IE 8 users' fault having to use that horrible browser! Lets give them a chance to see your site in a proper way!</p>
+                <div class="col-md-1">
                 </div>
             </div>
         </div>
@@ -771,6 +747,358 @@
             </div>
         </div>
         <div class="section" id="section3">
+            <div class="slide active">
+                <div class="intro">
+                    <h1></h1>
+                    <p></p>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="intro">
+                    <h2>Movie-Scripts in Types and Review Results</h2>
+                    <p class="row">
+                        <div class="col-md-2">
+                        </div>
+                        <div id="chart1" class="col-md-8" style="margin-right: 5%; width:900px;height:400px;">
+                            <script>
+                                var myChart = echarts.init(document.getElementById('chart1'));
+                                var timeLineData = [2011, 2012, 2013, 2014, 2015, 2016];
+                                var yData = ['Special usage movies', 'Feature Movies', 'Foreign co-production \n Movies', 'Documentories', 'Scientific & Educational \n  Movies', 'Cartoon'];
+                                var WLData = ['Agreed', 'Agree with Modification', 'Agreed in  Principle'];
+                                AGData = {
+                                        2011: [96, 86, 38, 95, 100, 100],
+                                        2012: [94, 87, 41, 97, 100, 100],
+                                        2013: [97, 84, 51, 95, 100, 97],
+                                        2014: [96, 82, 31, 98, 100, 98],
+                                        2015: [97, 88, 96, 98, 96, 100],
+                                        2016: [92, 88, 99, 96, 100, 100],
+                                    },
+                                    MOData = {
+                                        2011: [2, 12, 62, NaN, NaN, NaN],
+                                        2012: [2, 10, 57, NaN, NaN, NaN],
+                                        2013: [NaN, 12, 49, 2, NaN, 3],
+                                        2014: [4, 13, 67, 1, NaN, 2],
+                                        2015: [3, 10, 4, NaN, 4, NaN],
+                                        2016: [6, 11, NaN, NaN, NaN, NaN],
+                                    },
+                                    PRData = {
+                                        2011: [2, 2, NaN, 5, NaN, NaN],
+                                        2012: [4, 3, 2, 3, NaN, NaN],
+                                        2013: [3, 4, NaN, 3, NaN, NaN],
+                                        2014: [NaN, 5, 2, 1, NaN, NaN],
+                                        2015: [NaN, 2, NaN, 2, NaN, NaN],
+                                        2016: [2, 1, 1, 4, NaN, NaN],
+                                    },
+
+
+                                    option = {
+                                        baseOption: {
+                                            title: {
+                                                show: true,
+                                                subtextStyle: {
+                                                    color: '#fae5c6',
+                                                    fontWeight: 'bold',
+                                                    fontSize: '30'
+                                                }
+                                            },
+                                            timeline: {
+                                                axisType: 'category',
+                                                orient: 'vertical',
+                                                autoPlay: true,
+                                                inverse: true,
+                                                playInterval: 3000,
+                                                left: null,
+                                                right: 10,
+                                                top: 20,
+                                                bottom: 20,
+                                                width: 55,
+                                                height: null,
+                                                lineStyle: {
+                                                    color: '#fae5c6',
+                                                    width: 4
+                                                },
+                                                itemStyle: {
+                                                    normal: {
+                                                        color: '#fae5c6'
+                                                    }
+                                                },
+                                                checkpointStyle: {
+                                                    color: '#bbb',
+                                                    borderColor: '#777',
+                                                    borderWidth: 2
+                                                },
+                                                controlStyle: {
+                                                    showNextBtn: false,
+                                                    showPrevBtn: false,
+                                                    normal: {
+                                                        color: '#666',
+                                                        borderColor: '#666'
+                                                    },
+                                                    emphasis: {
+                                                        color: '#aaa',
+                                                        borderColor: '#aaa'
+                                                    }
+                                                },
+                                                data: [],
+                                                label: {
+                                                    normal: {
+                                                        textStyle: {
+                                                            color: '#fae5c6'
+                                                        }
+                                                    },
+                                                    formatter: function(s) {
+                                                        return (new Date(s)).getFullYear();
+                                                    }
+                                                }
+                                            },
+                                            tooltip: {
+                                                trigger: 'item',
+                                                axisPointer: {
+                                                    type: 'shadow'
+                                                },
+                                                formatter: "{b} <br/>{a} : {c}%"
+                                            },
+                                            legend: {
+                                                data: [],
+                                                bottom: '90%',
+                                                textStyle: {
+                                                    color: '#fae5c6'
+                                                }
+                                            },
+                                            grid: {
+                                                right: '20%',
+                                                bottom: '-20%',
+                                                containLabel: true,
+                                            },
+                                            xAxis: {
+                                                type: 'value',
+                                                max: 100,
+                                                min: 0,
+                                                "axisLabel": {
+                                                    "interval": 0,
+                                                    formatter: '{value}%',
+                                                    textStyle: {
+                                                        color: '#fae5c6'
+                                                    }
+                                                }
+                                            },
+                                            yAxis: {
+                                                type: 'category',
+                                                data: yData,
+                                                axisLabel: {
+                                                    textStyle: {
+                                                        color: '#fae5c6'
+                                                    }
+                                                }
+                                            },
+                                            series: [],
+                                            animationEasing: 'elasticOut',
+                                            animationDelayUpdate: function(idx) {
+                                                return idx * 5;
+                                            }
+                                        },
+                                        options: []
+                                    };
+                                for (var n = 0; n < timeLineData.length; n++) {
+                                    option.baseOption.legend.data = WLData;
+                                    option.baseOption.timeline.data.push(timeLineData[n]);
+                                    option.options.push({
+                                        title: {
+                                            subtext: timeLineData[n],
+                                        },
+                                        series: [{
+                                            name: WLData[0],
+                                            type: 'bar',
+                                            itemStyle: {
+                                                normal: {
+                                                    color: '#316f68'
+                                                }
+                                            },
+                                            stack: '总量',
+                                            label: {
+                                                normal: {
+                                                    show: true,
+                                                    formatter: '{c}%',
+                                                },
+                                            },
+                                            data: AGData[timeLineData[n]],
+                                        }, {
+                                            name: WLData[1],
+                                            type: 'bar',
+                                            itemStyle: {
+                                                normal: {
+                                                    color: '#c4ac98'
+                                                }
+                                            },
+                                            stack: '总量',
+                                            label: {
+                                                normal: {
+                                                    show: true,
+                                                    formatter: '{c}%',
+                                                }
+                                            },
+                                            data: MOData[timeLineData[n]],
+                                        }, {
+                                            name: WLData[2],
+                                            type: 'bar',
+                                            itemStyle: {
+                                                normal: {
+                                                    color: '#ac534f'
+                                                }
+                                            },
+                                            stack: '总量',
+                                            label: {
+                                                normal: {
+                                                    show: false
+                                                }
+                                            },
+                                            data: PRData[timeLineData[n]],
+                                        }]
+                                    });
+                                }
+                                myChart.setOption(option)
+                            </script>
+                        </div>
+                        <div class="col-md-2">
+                        </div>
+                    </p>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="intro">
+                    <h2>Movie-Scripts in Types, 2011-16</h2>
+                    <div class="row">
+                        <div class="col-md-2">
+                        </div>
+                        <p id="chart2" class="col-md-8" style="margin-left: 5%; width:800px;height:400px;">
+                            <script>
+                                var myChart = echarts.init(document.getElementById('chart2'));
+                                option = {
+                                    tooltip: {
+                                        trigger: 'axis'
+                                    },
+                                    legend: {
+                                        data: ['Cartoon', 'Feature Movies', 'Foreign co-production Movies', 'Documentories', 'Scientific & Educational Movies', 'Special Usage Movies'],
+                                        selected: {
+                                            'Feature Movies': false
+                                        },
+                                        bottom: '90%',
+                                        textStyle: {
+                                            color: '#fae5c6'
+                                        }
+                                    },
+                                    grid: {
+                                        left: '3%',
+                                        right: '4%',
+                                        bottom: '3%',
+                                        containLabel: true,
+                                    },
+                                    xAxis: {
+                                        type: 'category',
+                                        boundaryGap: false,
+                                        axisLabel: {
+                                            textStyle: {
+                                                color: '#fae5c6'
+                                            }
+                                        },
+                                        data: ['2011', '2012', '2013', '2014', '2015', '2016']
+                                    },
+                                    yAxis: {
+                                        type: 'value',
+                                        axisLabel: {
+                                            textStyle: {
+                                                color: '#fae5c6'
+                                            }
+                                        }
+                                    },
+                                    series: [{
+                                        name: 'Cartoon',
+                                        type: 'line',
+                                        data: [81, 73, 90, 141, 181, 174],
+                                        stack: '总量',
+                                        areaStyle: {
+                                            normal: {}
+                                        },
+                                        itemStyle: {
+                                            normal: {
+                                                color: '#ffe0c6'
+                                            }
+                                        }
+                                    }, {
+                                        name: 'Feature Movies',
+                                        type: 'line',
+                                        data: [1492, 1783, 1852, 2589, 3125, 3241],
+                                    }, {
+                                        name: 'Foreign co-production Movie',
+                                        type: 'line',
+                                        data: [66, 84, 73, 110, 96, 93],
+                                        stack: '总量',
+                                        areaStyle: {
+                                            normal: {}
+                                        },
+                                        itemStyle: {
+                                            normal: {
+                                                color: '#c4ac98'
+                                            }
+                                        }
+                                    }, {
+                                        name: 'Documentories',
+                                        type: 'line',
+                                        data: [20, 32, 44, 113, 83, 85],
+                                        stack: '总量',
+                                        areaStyle: {
+                                            normal: {}
+                                        },
+                                        itemStyle: {
+                                            normal: {
+                                                color: '#b5c8dc'
+                                            }
+                                        }
+                                    }, {
+                                        name: 'Scientific & Educational Movies',
+                                        type: 'line',
+                                        data: [47, 71, 152, 100, 55, 104],
+                                        stack: '总量',
+                                        areaStyle: {
+                                            normal: {}
+                                        },
+                                        itemStyle: {
+                                            normal: {
+                                                color: '#6d8974'
+                                            }
+                                        }
+                                    }, {
+                                        name: 'Special Usage Movies',
+                                        type: 'line',
+                                        data: [36, 47, 33, 50, 28, 29],
+                                        stack: '总量',
+                                        areaStyle: {
+                                            normal: {}
+                                        },
+                                        itemStyle: {
+                                            normal: {
+                                                color: '#ac534f'
+                                            }
+                                        }
+                                    }]
+                                };
+                                myChart.setOption(option)
+                            </script>
+                        </p>
+                        <div class="col-md-2">
+                        </div>
+                    </div>
+                    <p>rfqwiufqiwufbquierfbuiegiuqehgi</p>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="intro">
+                    <h1>Compatible</h1>
+                    <p>Working in modern and old browsers too! It's not IE 8 users' fault having to use that horrible browser! Lets give them a chance to see your site in a proper way!</p>
+                </div>
+            </div>
+        </div>
+        <div class="section" id="section4">
             <div class="intro">
                 <h1>Working On Tablets</h1>
                 <p>
@@ -792,48 +1120,13 @@
                     <div class="column">
                         <h3>Navigation</h3>
                         <ul>
-                            <li><a href="examples/scrollBar.html">Scroll Bar Enabled</a></li>
-                            <li><a href="examples/normalScroll.html">Normal scrolling</a></li>
-                            <li><a href="examples/continuous.html">Continuous vertical</a></li>
-                            <li><a href="examples/noAnchor.html">Without anchor links (same URL)</a></li>
-                            <li><a href="examples/navigationV.html">Vertical navigation dots</a></li>
                             <li><a href="examples/navigationH.html">Horizontal navigation dots</a></li>
                         </ul>
                     </div>
                     <div class="column">
                         <h3>Design</h3>
                         <ul>
-                            <li><a href="examples/responsive.html">Responsive</a></li>
-                            <li><a href="examples/backgrounds.html">Full backgrounds</a></li>
-                            <li><a href="examples/videoBackground.html">Full background videos</a></li>
-                            <li><a href="examples/autoHeight.html">Auto-height sections</a></li>
-                            <li><a href="examples/gradientBackgrounds.html">Gradient backgrounds</a></li>
-                            <li><a href="examples/scrolling.html">Scrolling inside sections and slides</a></li>
-                            <li><a href="examples/fixedHeaders.html">Adding fixed header and footer</a></li>
                             <li><a href="examples/oneSection.html">One single section</a></li>
-                        </ul>
-                    </div>
-                    <div class="column">
-                        <h3>Extensions</h3>
-                        <ul>
-                            <li><a href="extensions/parallax.html">Parallax</a></li>
-                            <li><a href="extensions/continuous-horizontal.html">Continuous horizontal</a></li>
-                            <li><a href="extensions/interlocked-slides.html">Interlocked Slides</a></li>
-                            <li><a href="extensions/reset-sliders.html">Reset Sliders</a></li>
-                            <li><a href="extensions/responsive-slides.html">Responsive Slides</a></li>
-                            <li><a href="extensions/scroll-horizontally.html">Horizontal mouse wheel</a></li>
-                            <li><a href="extensions/fading-effect.html">Fading Effect</a></li>
-                            <li><a href="extensions/offset-sections.html">Offset sections</a></li>
-                            <li><a href="extensions/drag-and-move.html">Drag and move</a></li>
-                            <li><a href="extensions/scrolloverflow-reset.html">ScrollOverflow reset</a></li>
-                        </ul>
-                    </div>
-                    <div class="column">
-                        <h3>Other</h3>
-                        <ul>
-                            <li><a href="examples/apple.html">Animations on scrolling</a></li>
-                            <li><a href="examples/callbacks.html">Callbacks</a></li>
-                            <li><a href="examples/methods.html">Functions and methods</a></li>
                         </ul>
                     </div>
                 </div>
@@ -845,12 +1138,14 @@
         </ul>
     </div>
 
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script type="text/javascript" src="jquery.fullPage.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
             $('#fullpage').fullpage({
-                sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
+                sectionsColor: ['#263858', '#3978a3', '#263858', '#3978a3'],
                 anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
                 menu: '#menu',
                 css3: true,
