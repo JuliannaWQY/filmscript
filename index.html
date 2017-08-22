@@ -3,23 +3,23 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>China Movie-Script Data Analysis, 2011-16 - Data Visualization Project</title>
+    <title>China Film-Script Data Analysis, 2011-16 - Data Visualization Project</title>
     <meta name="author" content="JuliannaW" />
-    <meta name="description" content="What kind of movies receive the largest censorship and what are the keywords of Chinese movies in each year from 2011 to 2016" />
+    <meta name="description" content="The film-script censorship and the keywords of Chinese films" />
     <meta name="keywords" content="movies,china,script,censorship,data,journalism,data journalism,visualization" />
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta property="og:title" content="China Movie-Script Data Analysis, 2011-16 - Data Visualization Project">
+    <meta property="og:title" content="China Film-Script Data Analysis - Data Visualization Project">
     <meta property="og:type" content="website">
-    <meta property="og:description" content="What kind of movies receive the largest censorship and what are the keywords of Chinese movies in each year from 2011 to 2016.">
+    <meta property="og:description" content="The film-script censorship and the keywords of Chinese films.">
     <meta property="og:image" content="">
-    <meta property="og:url" content="https://juliannawqy.github.io/moviescript/">
+    <meta property="og:url" content="https://juliannawqy.github.io/filmscript/">
     <meta name="twitter:card" content="photo">
     <meta name="twitter:site" content="@julianna">
     <meta name="twitter:creator" content="@julianna">
-    <meta name="twitter:title" content="China Movie Script Data Analysis, Data Visualization Project">
-    <meta name="twitter:description" content="What kind of movies receive the largest censorship and what are the keywords of Chinese movies in each year from 2011 to 2016.">
+    <meta name="twitter:title" content="China Film Script Data Analysis, Data Visualization Project">
+    <meta name="twitter:description" content="The film-script censorship and the keywords of Chinese films.">
     <meta name="twitter:image" content="">
-    <meta name="twitter:url" content="https://juliannawqy.github.io/moviescript/">
+    <meta name="twitter:url" content="https://juliannawqy.github.io/filmscript/">
     <meta name="Resource-type" content="Document" />
     <link rel="stylesheet" type="text/css" href="jquery.fullpage.min.css" />
 
@@ -149,7 +149,6 @@
         
         body {
             font-family: arial, helvetica;
-            background-color: #1BBC9B
         }
         
         body,
@@ -176,10 +175,6 @@
         
         h2 {
             font-size: 2em
-        }
-        
-        p {
-            font-size: 1.5em
         }
         
         .section {
@@ -259,16 +254,25 @@
         }
         
         #usedBy {
-            background-image: url(imgs/used-by-fullpage.png?v=2);
+            background-image: url(img/used-by-fullpage.png?v=2);
             margin: 50px auto 0;
             display: block;
             height: 127px;
             width: 402px
         }
         
-        #section0 img,
-        #section1 img {
+        #section0 {
+            background: url(img/bg.jpg) no-repeat center center;
+            background-size: cover
+        }
+        
+        #section0 img {
             margin: 20px 0 0
+        }
+        
+        #section1,
+        #section2 p {
+            font-size: 1.2em
         }
         
         #section2 img {
@@ -279,6 +283,20 @@
             bottom: 0;
             position: absolute;
             margin-left: -420px
+        }
+        
+        #section6 img {
+            height: 270px;
+            width: 210px
+        }
+        
+        #section6 p {
+            font-size: 1em;
+        }
+        
+        #section6,
+        #section2 h3 {
+            font-size: 1.5em;
         }
         
         .intro p {
@@ -453,7 +471,29 @@
         }
         
         #emphasizs {
-            font-size: 3em;
+            font-size: 2.5em;
+        }
+        
+        #one,
+        #two,
+        #three,
+        #four,
+        #five,
+        #six {
+            background-color: #263858;
+            padding: 20px;
+            text-align: right;
+            border: 2px solid #263858;
+            border-radius: 30px;
+        }
+        
+        #one,
+        #two,
+        #three,
+        #four,
+        #five,
+        #six h3 {
+            align: center
         }
         
         @media screen and (max-width:990px) {
@@ -717,435 +757,553 @@
 
     <div id="fullpage">
 
-        <div class="section active" id="section0">
+        <div class="section" id="section0">
             <h1>From ... to ...</h1>
-            <h2>Visualising China's movie-script censorship and keyword trend in six years.</h2>
+            <h2>Visualising China's film-script censorship and keyword trend in six years.</h2>
             <div id="github-stars-button">
             </div>
             <div class="button" id="download"><a href="https://github.com/alvarotrigo/fullpage.js/archive/master.zip">Download</a></div><br />
         </div>
-        <div class="section" id="section1" style="color:black">
-            <div class="slide active">
-                <h1 style="color:black">Background</h1>
-                <p class="row">
-                    <div class="col-md-1">
-                    </div>
-                    <div class="col-md-10">
-                        <p>In China, in order to be able to screening publicly, any kind of movies/videos would need to get the permission from The State Administration of Radio Film and Television.</p>
-                        <p> The review of movie-script is part of the process, in which a summary or the full text of script has to be submitted to the relavent department. For those plots that involves national minorities, history, police &amp; army or any
-                            other senstive materials, the authority would advice the author to change or modify them.</p>
-                        <p> After few weeks or longer time depending on the modification process, a script would receive three kinds of results for its application: Approved, Approved with modification or Approved in principle, which is an euphemism of the
-                            problems that are not completly "wrong".</p>
-                    </div>
-                    <div class="col-md-1">
-                    </div>
-                </p>
-            </div>
-            <div class="slide">
-                <h1 style="color:black">Some Big Data</h1>
-                <h2 style="color:black"><i>From 2011 to 2016: </i></h2>
-                <div class="row">
-                    <div class="col-md-1">
-                    </div>
-                    <div class="col-md-10">
-                        <p>
-                            Averagly <span id="emphasizs">3000</span> scripts were submitted per year to the The State Administration of Radio Film and Television. In Total <strong style="font-size:1.5em">18033</strong> movie-scripts.</p>
-                        <p>Among them, <span id='emphasizs'>86%</span> were <i>feature movies</i>. Others were cartoon, documentories, educational movies and special usage movies.<strong style="font-size:1.5em">11225</strong> script writers and
-                            <strong style="font-size:1.5em">9552</strong> production companies were involved.</p>
-                    </div>
-                    <div class="col-md-1">
-                    </div>
+        <div class="section" id="section1">
+            <div class="row">
+                <div class="col-md-1">
+                </div>
+                <div class="col-md-5" style="text-align:right">
+                    <br>
+                    <h2>Background</h2>
+                    <hr>
+                    <br>
+                    <p>In China, in order to screen publicly, any kind of films/videos would need to get the permission by submitting a summary or the full text of script to The State Administration of Radio Film and Television.</p>
+                    <p>For those plots that involves foreign relations, ethnicities, religion, military affairs, public security, famous historical persons &amp; famous cultural persons or any other senstive materials in the script, the authority would advice
+                        the author to change or modify them.</p>
+                    <p>After few weeks or longer time vary from case to case, a film-script would receive three kinds of results for its application: <strong><i>Approved</i></strong>, <strong><i>Approved with revision</i></strong> or <strong><i>Approved in principle</i></strong>,
+                        which is an euphemism of the problems that are not completly "wrong".</p>
+                </div>
+                <div class="col-md-5">
+                    <img src="img/long.png" style="width:80%;height:80%;margin-top:10%">
+                </div>
+                <div class="col-md-1">
                 </div>
             </div>
         </div>
         <div class="section" id="section2">
-            <div class="slide active">
-                <div class="intro">
-                    <h1>Changes &amp; Those Who were Changed</h1>
-                    <p>The filter were eased through the years. Foreign co-operated movies used to be the biggest target for censorship.</p>
+            <div class="row">
+                <div class="col-md-1">
                 </div>
-            </div>
-            <div class="slide">
-                <div class="intro">
-                    <h2>Movie-Scripts in Types and Review Results in %</h2>
-                    <div class="row">
-                        <div class="col-md-2">
-                        </div>
-                        <div id="chart1" class="col-md-8" style="margin-right: 5%; width:900px;height:400px;">
-                            <script>
-                                var myChart = echarts.init(document.getElementById('chart1'));
-                                var timeLineData = [2011, 2012, 2013, 2014, 2015, 2016];
-                                var yData = ['Special usage movies', 'Feature Movies', 'Foreign co-production \n Movies', 'Documentories', 'Scientific & Educational \n  Movies', 'Cartoon'];
-                                var WLData = ['Approved', 'Approved with Modification', 'Approved in Principle'];
-                                AGData = {
-                                        2011: [96, 86, 38, 95, 100, 100],
-                                        2012: [94, 87, 41, 97, 100, 100],
-                                        2013: [97, 84, 51, 95, 100, 97],
-                                        2014: [96, 82, 31, 98, 100, 98],
-                                        2015: [97, 88, 96, 98, 96, 100],
-                                        2016: [92, 88, 99, 96, 100, 100],
-                                    },
-                                    MOData = {
-                                        2011: [2, 12, 62, NaN, NaN, NaN],
-                                        2012: [2, 10, 57, NaN, NaN, NaN],
-                                        2013: [NaN, 12, 49, 2, NaN, 3],
-                                        2014: [4, 13, 67, 1, NaN, 2],
-                                        2015: [3, 10, 4, NaN, 4, NaN],
-                                        2016: [6, 11, NaN, NaN, NaN, NaN],
-                                    },
-                                    PRData = {
-                                        2011: [2, 2, NaN, 5, NaN, NaN],
-                                        2012: [4, 3, 2, 3, NaN, NaN],
-                                        2013: [3, 4, NaN, 3, NaN, NaN],
-                                        2014: [NaN, 5, 2, 1, NaN, NaN],
-                                        2015: [NaN, 2, NaN, 2, NaN, NaN],
-                                        2016: [2, 1, 1, 4, NaN, NaN],
-                                    },
-
-
-                                    option = {
-                                        baseOption: {
-                                            title: {
-                                                show: true,
-                                                subtextStyle: {
-                                                    color: '#fae5c6',
-                                                    fontWeight: 'bold',
-                                                    fontSize: '30'
-                                                }
-                                            },
-                                            timeline: {
-                                                axisType: 'category',
-                                                orient: 'vertical',
-                                                autoPlay: true,
-                                                inverse: true,
-                                                playInterval: 3000,
-                                                left: null,
-                                                right: 10,
-                                                top: 20,
-                                                bottom: 20,
-                                                width: 55,
-                                                height: null,
-                                                lineStyle: {
-                                                    color: '#fae5c6',
-                                                    width: 4
-                                                },
-                                                itemStyle: {
-                                                    normal: {
-                                                        color: '#fae5c6'
-                                                    }
-                                                },
-                                                checkpointStyle: {
-                                                    color: '#bbb',
-                                                    borderColor: '#777',
-                                                    borderWidth: 2
-                                                },
-                                                controlStyle: {
-                                                    showNextBtn: false,
-                                                    showPrevBtn: false,
-                                                    normal: {
-                                                        color: '#666',
-                                                        borderColor: '#666'
-                                                    },
-                                                    emphasis: {
-                                                        color: '#aaa',
-                                                        borderColor: '#aaa'
-                                                    }
-                                                },
-                                                data: [],
-                                                label: {
-                                                    normal: {
-                                                        textStyle: {
-                                                            color: '#fae5c6'
-                                                        }
-                                                    },
-                                                    formatter: function(s) {
-                                                        return (new Date(s)).getFullYear();
-                                                    }
-                                                }
-                                            },
-                                            tooltip: {
-                                                trigger: 'item',
-                                                axisPointer: {
-                                                    type: 'shadow'
-                                                },
-                                                formatter: "{b} <br/>{a} : {c}%"
-                                            },
-                                            legend: {
-                                                data: [],
-                                                bottom: '90%',
-                                                textStyle: {
-                                                    color: '#fae5c6'
-                                                }
-                                            },
-                                            grid: {
-                                                right: '20%',
-                                                bottom: '-20%',
-                                                containLabel: true,
-                                            },
-                                            xAxis: {
-                                                type: 'value',
-                                                max: 100,
-                                                min: 0,
-                                                "axisLabel": {
-                                                    "interval": 0,
-                                                    formatter: '{value}%',
-                                                    textStyle: {
-                                                        color: '#fae5c6'
-                                                    }
-                                                }
-                                            },
-                                            yAxis: {
-                                                type: 'category',
-                                                data: yData,
-                                                axisLabel: {
-                                                    textStyle: {
-                                                        color: '#fae5c6'
-                                                    }
-                                                }
-                                            },
-                                            series: [],
-                                            animationEasing: 'elasticOut',
-                                            animationDelayUpdate: function(idx) {
-                                                return idx * 5;
-                                            }
-                                        },
-                                        options: []
-                                    };
-                                for (var n = 0; n < timeLineData.length; n++) {
-                                    option.baseOption.legend.data = WLData;
-                                    option.baseOption.timeline.data.push(timeLineData[n]);
-                                    option.options.push({
-                                        title: {
-                                            subtext: timeLineData[n],
-                                        },
-                                        series: [{
-                                            name: WLData[0],
-                                            type: 'bar',
-                                            itemStyle: {
-                                                normal: {
-                                                    color: '#316f68'
-                                                }
-                                            },
-                                            stack: '总量',
-                                            label: {
-                                                normal: {
-                                                    show: true,
-                                                    formatter: '{c}%',
-                                                },
-                                            },
-                                            data: AGData[timeLineData[n]],
-                                        }, {
-                                            name: WLData[1],
-                                            type: 'bar',
-                                            itemStyle: {
-                                                normal: {
-                                                    color: '#c4ac98'
-                                                }
-                                            },
-                                            stack: '总量',
-                                            label: {
-                                                normal: {
-                                                    show: true,
-                                                    formatter: '{c}%',
-                                                }
-                                            },
-                                            data: MOData[timeLineData[n]],
-                                        }, {
-                                            name: WLData[2],
-                                            type: 'bar',
-                                            itemStyle: {
-                                                normal: {
-                                                    color: '#ac534f'
-                                                }
-                                            },
-                                            stack: '总量',
-                                            label: {
-                                                normal: {
-                                                    show: false
-                                                }
-                                            },
-                                            data: PRData[timeLineData[n]],
-                                        }]
-                                    });
-                                }
-                                myChart.setOption(option)
-                            </script>
-                        </div>
-                        <div class="col-md-2">
-                        </div>
-                    </div>
-                    <br>
-                    <p>The filter were loosen since 2011 while around 12% of feature movies would still be modified each year.</p>
+                <div class="col-md-5">
+                    <img src="img/dots.jpg" style="width:80%;height:80%">
                 </div>
-            </div>
-            <div class="slide">
-                <div class="intro">
-                    <h2>Movie-Scripts in Types, 2011-16</h2>
-                    <div class="row">
-                        <div class="col-md-2">
-                        </div>
-                        <div id="chart2" class="col-md-8" style="margin-left: 5%; width:800px;height:400px;">
-                            <script>
-                                var myChart = echarts.init(document.getElementById('chart2'));
-                                option = {
-                                    tooltip: {
-                                        trigger: 'axis'
-                                    },
-                                    legend: {
-                                        data: ['Cartoon', 'Feature Movies', 'Foreign co-production Movies', 'Documentories', 'Scientific & Educational Movies', 'Special Usage Movies'],
-                                        selected: {
-                                            'Feature Movies': false
-                                        },
-                                        bottom: '90%',
-                                        textStyle: {
-                                            color: '#fae5c6'
-                                        }
-                                    },
-                                    grid: {
-                                        left: '3%',
-                                        right: '4%',
-                                        bottom: '3%',
-                                        containLabel: true,
-                                    },
-                                    xAxis: {
-                                        type: 'category',
-                                        boundaryGap: false,
-                                        axisLabel: {
-                                            textStyle: {
-                                                color: '#fae5c6'
-                                            }
-                                        },
-                                        data: ['2011', '2012', '2013', '2014', '2015', '2016']
-                                    },
-                                    yAxis: {
-                                        type: 'value',
-                                        axisLabel: {
-                                            textStyle: {
-                                                color: '#fae5c6'
-                                            }
-                                        }
-                                    },
-                                    series: [{
-                                        name: 'Cartoon',
-                                        type: 'line',
-                                        data: [81, 73, 90, 141, 181, 174],
-                                        stack: '总量',
-                                        areaStyle: {
-                                            normal: {}
-                                        },
-                                        itemStyle: {
-                                            normal: {
-                                                color: '#ffe0c6'
-                                            }
-                                        }
-                                    }, {
-                                        name: 'Feature Movies',
-                                        type: 'line',
-                                        data: [1492, 1783, 1852, 2589, 3125, 3241],
-                                    }, {
-                                        name: 'Foreign co-production Movie',
-                                        type: 'line',
-                                        data: [66, 84, 73, 110, 96, 93],
-                                        stack: '总量',
-                                        areaStyle: {
-                                            normal: {}
-                                        },
-                                        itemStyle: {
-                                            normal: {
-                                                color: '#c4ac98'
-                                            }
-                                        }
-                                    }, {
-                                        name: 'Documentories',
-                                        type: 'line',
-                                        data: [20, 32, 44, 113, 83, 85],
-                                        stack: '总量',
-                                        areaStyle: {
-                                            normal: {}
-                                        },
-                                        itemStyle: {
-                                            normal: {
-                                                color: '#b5c8dc'
-                                            }
-                                        }
-                                    }, {
-                                        name: 'Scientific & Educational Movies',
-                                        type: 'line',
-                                        data: [47, 71, 152, 100, 55, 104],
-                                        stack: '总量',
-                                        areaStyle: {
-                                            normal: {}
-                                        },
-                                        itemStyle: {
-                                            normal: {
-                                                color: '#6d8974'
-                                            }
-                                        }
-                                    }, {
-                                        name: 'Special Usage Movies',
-                                        type: 'line',
-                                        data: [36, 47, 33, 50, 28, 29],
-                                        stack: '总量',
-                                        areaStyle: {
-                                            normal: {}
-                                        },
-                                        itemStyle: {
-                                            normal: {
-                                                color: '#ac534f'
-                                            }
-                                        }
-                                    }]
-                                };
-                                myChart.setOption(option)
-                            </script>
-                        </div>
-                        <div class="col-md-2">
-                        </div>
-                    </div>
-                    <p>China's movie industry received a boom in 2014. <br>Clink on '<i>Feature Movie</i>' to see how it surpasses the rest kinds of movies.</p>
+                <div class="col-md-5" style="text-align:left">
+                    <h2>Some Big Data</h2><br>
+                    <h3><i>From 2011 to 2016: </i></h3>
+                    <hr>
+                    <p>
+                        Averagly <span id="emphasizs">3000</span> scripts were submitted per year to the The State Administration of Radio Film and Television. In Total <strong style="font-size:1.5em">18033</strong> film-scripts.</p>
+                    <p>Among them, <span id='emphasizs'>86%</span> were <i>feature films</i>. Others were cartoon, documentories, educational films and special usage films.<strong style="font-size:1.5em">11225</strong> script writers and
+                        <strong style="font-size:1.5em">9552</strong> production companies were involved.</p>
                 </div>
-            </div>
-            <div class="slide">
-                <div class="intro">
-                    <h2>Top 6 Movie Prodiction Companies that Received most Modifications</h2>
-                    <ul>
-                        <li>National Administration of Radio, Film and Television Channel Production Center (国家广播电影电视总局电影卫星频道节目制作中心)</li>
-                        <li>China Film Group Corporation (中国电影股份有限公司)</li>
-                        <li>Xiaoxiang Film Group (潇湘电影集团有限公司)</li>
-                        <li>Bona Film Group Limited (博纳影业集团有限公司)</li>
-                        <li>Le Vision Pictures (乐视影业（北京）有限公司)</li>
-                        <li>Huayi Brothers Media Group Co.,Ltd (华谊兄弟传媒股份有限公司)</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="slide">
-                <div class="intro">
-                    <h2>Famous Script Writers who Received most Modifications </h2>
-                    <div class="row">
-                        <div class="col-md-2">
-                        </div>
-                        <div class="col-md-4">
-                            <img src="img/huang.jpg" style="height:100px;width:100px">
-                        </div>
-                        <div class="col-md-4" style="text-align:left">
-                            <p>Famous for: Yip Man Series</p>
-                            <p>Scripts that were modified: Yip Man 3, Bounty Hunters (赏金猎人), Magic to Win (开心魔法)
-                            </p>
-                        </div>
-                        <div class="col-md-2">
-                        </div>
-                    </div>
+                <div class="col-md-1">
                 </div>
             </div>
         </div>
         <div class="section" id="section3">
+            <div class="intro">
+                <h1>Changes &amp; Those Who were Changed</h1>
+                <p>The filter were eased through the years. Foreign co-operated films used to be the biggest target for censorship.</p>
+            </div>
+        </div>
+        <div class="section" id="section4">
+            <div class="intro">
+                <h2>Film-Scripts in Types and Review Results in %</h2>
+                <div class="row">
+                    <div class="col-md-2">
+                    </div>
+                    <div id="chart1" class="col-md-8" style="margin-right: 5%; width:900px;height:400px;">
+                        <script>
+                            var myChart = echarts.init(document.getElementById('chart1'));
+                            var timeLineData = [2011, 2012, 2013, 2014, 2015, 2016];
+                            var yData = ['Special Usage Films', 'Feature Films', 'Foreign co-production \n Films', 'Documentories', 'Scientific & Educational \n  Films', 'Cartoon'];
+                            var WLData = ['Approved', 'Approved with Revision', 'Approved in Principle'];
+                            AGData = {
+                                    2011: [96, 86, 38, 95, 100, 100],
+                                    2012: [94, 87, 41, 97, 100, 100],
+                                    2013: [97, 84, 51, 95, 100, 97],
+                                    2014: [96, 82, 31, 98, 100, 98],
+                                    2015: [97, 88, 96, 98, 96, 100],
+                                    2016: [92, 88, 99, 96, 100, 100],
+                                },
+                                MOData = {
+                                    2011: [2, 12, 62, NaN, NaN, NaN],
+                                    2012: [2, 10, 57, NaN, NaN, NaN],
+                                    2013: [NaN, 12, 49, 2, NaN, 3],
+                                    2014: [4, 13, 67, 1, NaN, 2],
+                                    2015: [3, 10, 4, NaN, 4, NaN],
+                                    2016: [6, 11, NaN, NaN, NaN, NaN],
+                                },
+                                PRData = {
+                                    2011: [2, 2, NaN, 5, NaN, NaN],
+                                    2012: [4, 3, 2, 3, NaN, NaN],
+                                    2013: [3, 4, NaN, 3, NaN, NaN],
+                                    2014: [NaN, 5, 2, 1, NaN, NaN],
+                                    2015: [NaN, 2, NaN, 2, NaN, NaN],
+                                    2016: [2, 1, 1, 4, NaN, NaN],
+                                },
+
+
+                                option = {
+                                    baseOption: {
+                                        title: {
+                                            show: true,
+                                            subtextStyle: {
+                                                color: '#fae5c6',
+                                                fontWeight: 'bold',
+                                                fontSize: '30'
+                                            }
+                                        },
+                                        timeline: {
+                                            axisType: 'category',
+                                            orient: 'vertical',
+                                            autoPlay: true,
+                                            inverse: true,
+                                            playInterval: 3000,
+                                            left: null,
+                                            right: 10,
+                                            top: 20,
+                                            bottom: 20,
+                                            width: 55,
+                                            height: null,
+                                            lineStyle: {
+                                                color: '#fae5c6',
+                                                width: 4
+                                            },
+                                            itemStyle: {
+                                                normal: {
+                                                    color: '#fae5c6'
+                                                }
+                                            },
+                                            checkpointStyle: {
+                                                color: '#bbb',
+                                                borderColor: '#777',
+                                                borderWidth: 2
+                                            },
+                                            controlStyle: {
+                                                showNextBtn: false,
+                                                showPrevBtn: false,
+                                                normal: {
+                                                    color: '#666',
+                                                    borderColor: '#666'
+                                                },
+                                                emphasis: {
+                                                    color: '#aaa',
+                                                    borderColor: '#aaa'
+                                                }
+                                            },
+                                            data: [],
+                                            label: {
+                                                normal: {
+                                                    textStyle: {
+                                                        color: '#fae5c6'
+                                                    }
+                                                },
+                                                formatter: function(s) {
+                                                    return (new Date(s)).getFullYear();
+                                                }
+                                            }
+                                        },
+                                        tooltip: {
+                                            trigger: 'item',
+                                            axisPointer: {
+                                                type: 'shadow'
+                                            },
+                                            formatter: "{b} <br/>{a} : {c}%"
+                                        },
+                                        legend: {
+                                            data: [],
+                                            bottom: '90%',
+                                            textStyle: {
+                                                color: '#fae5c6'
+                                            }
+                                        },
+                                        grid: {
+                                            right: '20%',
+                                            bottom: '-20%',
+                                            containLabel: true,
+                                        },
+                                        xAxis: {
+                                            type: 'value',
+                                            max: 100,
+                                            min: 0,
+                                            "axisLabel": {
+                                                "interval": 0,
+                                                formatter: '{value}%',
+                                                textStyle: {
+                                                    color: '#fae5c6'
+                                                }
+                                            }
+                                        },
+                                        yAxis: {
+                                            type: 'category',
+                                            data: yData,
+                                            axisLabel: {
+                                                textStyle: {
+                                                    color: '#fae5c6'
+                                                }
+                                            }
+                                        },
+                                        series: [],
+                                        animationEasing: 'elasticOut',
+                                        animationDelayUpdate: function(idx) {
+                                            return idx * 5;
+                                        }
+                                    },
+                                    options: []
+                                };
+                            for (var n = 0; n < timeLineData.length; n++) {
+                                option.baseOption.legend.data = WLData;
+                                option.baseOption.timeline.data.push(timeLineData[n]);
+                                option.options.push({
+                                    title: {
+                                        subtext: timeLineData[n],
+                                    },
+                                    series: [{
+                                        name: WLData[0],
+                                        type: 'bar',
+                                        itemStyle: {
+                                            normal: {
+                                                color: '#316f68'
+                                            }
+                                        },
+                                        stack: '总量',
+                                        label: {
+                                            normal: {
+                                                show: true,
+                                                formatter: '{c}%',
+                                            },
+                                        },
+                                        data: AGData[timeLineData[n]],
+                                    }, {
+                                        name: WLData[1],
+                                        type: 'bar',
+                                        itemStyle: {
+                                            normal: {
+                                                color: '#c4ac98'
+                                            }
+                                        },
+                                        stack: '总量',
+                                        label: {
+                                            normal: {
+                                                show: true,
+                                                formatter: '{c}%',
+                                            }
+                                        },
+                                        data: MOData[timeLineData[n]],
+                                    }, {
+                                        name: WLData[2],
+                                        type: 'bar',
+                                        itemStyle: {
+                                            normal: {
+                                                color: '#ac534f'
+                                            }
+                                        },
+                                        stack: '总量',
+                                        label: {
+                                            normal: {
+                                                show: false
+                                            }
+                                        },
+                                        data: PRData[timeLineData[n]],
+                                    }]
+                                });
+                            }
+                            myChart.setOption(option)
+                        </script>
+                    </div>
+                    <div class="col-md-2">
+                    </div>
+                </div>
+                <br>
+                <p>The filter were loosen since 2011 while around 12% of feature films would still be modified each year.</p>
+            </div>
+        </div>
+        <div class="section" id="section5">
+            <div class="intro">
+                <h2>Film-Scripts in Types, 2011-16</h2>
+                <div class="row">
+                    <div class="col-md-2">
+                    </div>
+                    <div id="chart2" class="col-md-8" style="margin-left: 5%; width:800px;height:400px;">
+                        <script>
+                            var myChart = echarts.init(document.getElementById('chart2'));
+                            option = {
+                                tooltip: {
+                                    trigger: 'axis'
+                                },
+                                legend: {
+                                    data: ['Cartoon', 'Feature Films', 'Foreign co-production Films', 'Documentories', 'Scientific & Educational Films', 'Special Usage Films'],
+                                    selected: {
+                                        'Feature Films': false
+                                    },
+                                    bottom: '90%',
+                                    textStyle: {
+                                        color: '#fae5c6'
+                                    }
+                                },
+                                grid: {
+                                    left: '3%',
+                                    right: '4%',
+                                    bottom: '3%',
+                                    containLabel: true,
+                                },
+                                xAxis: {
+                                    type: 'category',
+                                    boundaryGap: false,
+                                    axisLabel: {
+                                        textStyle: {
+                                            color: '#fae5c6'
+                                        }
+                                    },
+                                    data: ['2011', '2012', '2013', '2014', '2015', '2016']
+                                },
+                                yAxis: {
+                                    type: 'value',
+                                    axisLabel: {
+                                        textStyle: {
+                                            color: '#fae5c6'
+                                        }
+                                    }
+                                },
+                                series: [{
+                                    name: 'Cartoon',
+                                    type: 'line',
+                                    data: [81, 73, 90, 141, 181, 174],
+                                    stack: '总量',
+                                    areaStyle: {
+                                        normal: {}
+                                    },
+                                    itemStyle: {
+                                        normal: {
+                                            color: '#ffe0c6'
+                                        }
+                                    }
+                                }, {
+                                    name: 'Feature Films',
+                                    type: 'line',
+                                    data: [1492, 1783, 1852, 2589, 3125, 3241],
+                                }, {
+                                    name: 'Foreign co-production Film',
+                                    type: 'line',
+                                    data: [66, 84, 73, 110, 96, 93],
+                                    stack: '总量',
+                                    areaStyle: {
+                                        normal: {}
+                                    },
+                                    itemStyle: {
+                                        normal: {
+                                            color: '#A48F7C'
+                                        }
+                                    }
+                                }, {
+                                    name: 'Documentories',
+                                    type: 'line',
+                                    data: [20, 32, 44, 113, 83, 85],
+                                    stack: '总量',
+                                    areaStyle: {
+                                        normal: {}
+                                    },
+                                    itemStyle: {
+                                        normal: {
+                                            color: '#4FAEAA'
+                                        }
+                                    }
+                                }, {
+                                    name: 'Scientific & Educational Films',
+                                    type: 'line',
+                                    data: [47, 71, 152, 100, 55, 104],
+                                    stack: '总量',
+                                    areaStyle: {
+                                        normal: {}
+                                    },
+                                    itemStyle: {
+                                        normal: {
+                                            color: '#316f68'
+                                        }
+                                    }
+                                }, {
+                                    name: 'Special Usage Films',
+                                    type: 'line',
+                                    data: [36, 47, 33, 50, 28, 29],
+                                    stack: '总量',
+                                    areaStyle: {
+                                        normal: {}
+                                    },
+                                    itemStyle: {
+                                        normal: {
+                                            color: '#ac534f'
+                                        }
+                                    }
+                                }]
+                            };
+                            myChart.setOption(option)
+                        </script>
+                    </div>
+                    <div class="col-md-2">
+                    </div>
+                </div>
+                <p>China's movie industry received a boom in 2014. <br>Clink on '<i>Feature Film</i>' to see how it surpasses the rest kinds of films.</p>
+            </div>
+        </div>
+        <div class="section" id="section6">
+            <div>
+                <h2>Top 6 Film Prodiction Companies that Received most Revision</h2>
+                <br>
+                <div class="row">
+                    <div class="col-md-2" style="margin-left:8%">
+                        <div class="btn-toolbar btn-group-vertical" role="toolbar" aria-label="Toolbar with button groups">
+                            <div class="btn-group mr-2" role="group">
+                                <button type="button" class="btn btn-success" id="1btn">1</button>
+                                <button type="button" class="btn btn-success" id="2btn">2</button>
+                                <button type="button" class="btn btn-success" id="3btn">3</button>
+                                <button type="button" class="btn btn-success" id="4btn">4</button>
+                                <button type="button" class="btn btn-success" id="5btn">5</button>
+                                <button type="button" class="btn btn-success" id="6btn">6</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="row">
+                            <div class="col-md-2">
+                            </div>
+                        </div>
+                        <div class="col-md-10" style="margin-right:3%">
+                            <div id='one'>
+                                <h3> Hunan Xiaoxiang the Second Pictures Co.,Ltd <br> (湖南潇影第二影业有限公司)</h3>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <p>Low-budget film production company based in Hunan province.</p>
+                                        <br>
+                                        <p><i>Modified scripts / total submitted:</i>
+                                            <br><strong>13 / 25</strong></p>
+                                        <br>
+                                        <p><i>Scripts that were modified:</i> <br> Young Leifeng (青年雷锋) etc.</p>
+                                        <br>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <img src="img/1-2.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                            <div id='two'>
+                                <h3> Xiaoxiang Film Group (潇湘电影集团有限公司)</h3>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <p>Another company of Hunan province. Usually produces "red" theme films that praises the heroic behaviours of <br>the War of Liberation.</p>
+                                        <br>
+                                        <p><i>Modified scripts / total submitted:</i>
+                                            <br><strong>23 / 61</strong></p>
+                                        <br>
+                                        <p><i>Scripts that were modified:</i> <br> The Legend of 1935 (领袖1935), etc.</p>
+                                        <br>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <img src="img/2-2.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                            <div id='three'>
+                                <h3> Bona Film Group Limited (博纳影业集团有限公司)</h3>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <p>The first Chinese film company that is listed on Nasdaq Stock Market of New York City.</p>
+                                        <br>
+                                        <p><i>Modified scripts / total submitted:</i>
+                                            <br><strong>18 / 41</strong></p>
+                                        <br>
+                                        <p><i>Scripts that were modified:</i> <br>The White Haired Witch of Lunar Kingdom (白发魔女传之明月天国), Sword Master (三少爷的剑) etc.</p>
+                                        <br>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <img src="img/3-1.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                            <div id='four'>
+                                <h3> Le Vision Pictures (乐视影业（北京）有限公司)</h3>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <p>Many big foreign co-produced films were made under this company. eg. the Great Wall (长城). Experienced financial crisis early this year.</p>
+                                        <br>
+                                        <p><i>Modified scripts / total submitted:</i>
+                                            <br><strong>15 / 34</strong></p>
+                                        <br>
+                                        <p><i>Scripts that were modified:</i> <br>L.O.R.D: Legend of Ravaging Dynasties (爵迹) etc.</p>
+                                        <br>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <img src="img/4-1.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                            <div id='five'>
+                                <h3> China Film Group Corporation (中国电影股份有限公司)</h3>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <p>State-owned film enterprise. It is also one of the only two institutions in China that can import films.</p>
+                                        <br>
+                                        <p><i>Modified scripts / total submitted:</i>
+                                            <br><strong>28 / 116</strong></p>
+                                        <br>
+                                        <p><i>Scripts that were modified:</i> <br>American Dreams in China (中国合伙人), Candle in the Tomb (鬼吹灯之精绝古城) etc.</p>
+                                        <br>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <img src="img/5-4.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                            <div id='six'>
+                                <h3> Huayi Brothers Media Group Co.,Ltd (华谊兄弟传媒股份有限公司)</h3>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <p>One of the biggest and most influencial film production and entertainment company in China.</p>
+                                        <br>
+                                        <p><i>Modified scripts / total submitted:</i>
+                                            <br>14 / 55</p>
+                                        <br>
+                                        <p><i>Scripts that were modified:</i> <br> Mojin: The Lost Legend (寻龙诀), Young Detective Dee: Rise of the Sea Dragon (狄仁杰之神都龙王) etc.</p>
+                                        <br>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <img src="img/6-1.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section" id="section7">
+            <div>
+                <h2>The Mysterious Content that Would be Crossed</h2>
+
+            </div>
+        </div>
+        <div class="section" id="section8">
             <div class="intro">
                 <h1>Easy to use plugin</h1>
                 <p>HTML markup example to define 4 sections.</p>
                 <img data-src="imgs/example2.png" alt="example" height="154" width="494" id="easyToUse" />
             </div>
         </div>
-        <div class="section" id="section4">
+        <div class="section" id="section9">
             <div class="intro">
                 <h1>Working On Tablets</h1>
                 <p>
@@ -1157,46 +1315,19 @@
         </div>
     </div>
 
-    <div id="infoMenu">
-        <ul>
-            <li><a href="https://alvarotrigo.com/fullPage/utils/wordpress.html">Wordpress theme</a></li>
-            <li><a href="https://github.com/alvarotrigo/fullPage.js/archive/master.zip">Download</a></li>
-            <li>
-                <a href="#" id="showExamples">Examples</a>
-                <div id="examplesList">
-                    <div class="column">
-                        <h3>Navigation</h3>
-                        <ul>
-                            <li><a href="examples/navigationH.html">Horizontal navigation dots</a></li>
-                        </ul>
-                    </div>
-                    <div class="column">
-                        <h3>Design</h3>
-                        <ul>
-                            <li><a href="examples/oneSection.html">One single section</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-            </li>
-            <li><a href="https://github.com/alvarotrigo/fullPage.js#fullpagejs">Documentation</a></li>
-            <li><a href="https://alvarotrigo.com/#contact-page">Contact</a></li>
-            <li><a href="https://twitter.com/IMAC2">Twitter</a></li>
-        </ul>
-    </div>
-
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script type="text/javascript" src="jquery.fullPage.min.js"></script>
+    <script type="text/javascript" src="js/my.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
             $('#fullpage').fullpage({
-                sectionsColor: ['#263858', '#3978a3', '#263858', '#3978a3'],
+                sectionsColor: ['#14142E', '#263858', '#14142E', '#263858', '#14142E', '#263858', '#14142E', '#263858', '#14142E', '#263858'],
                 anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
                 menu: '#menu',
                 css3: true,
-                scrollingSpeed: 1000
+                scrollingSpeed: 800
             });
 
             $('#showExamples').click(function(e) {
