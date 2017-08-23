@@ -14,8 +14,7 @@
     <meta property="og:image" content="">
     <meta property="og:url" content="https://juliannawqy.github.io/filmscript/">
     <meta name="twitter:card" content="photo">
-    <meta name="twitter:site" content="@julianna">
-    <meta name="twitter:creator" content="@julianna">
+    <meta name="twitter:creator" content="JuliannaW">
     <meta name="twitter:title" content="China Film Script Data Analysis, Data Visualization Project">
     <meta name="twitter:description" content="The film-script censorship and the keywords of Chinese films.">
     <meta name="twitter:image" content="">
@@ -187,7 +186,6 @@
             right: 149px
         }
         
-        #infoMenu,
         #menu {
             z-index: 70;
             position: fixed
@@ -220,7 +218,6 @@
         }
         
         #donations a:hover,
-        #download,
         #menu li.active a {
             color: #fff
         }
@@ -240,8 +237,7 @@
             padding: 0
         }
         
-        #examplesList ul li a:hover,
-        #infoMenu {
+        #examplesList ul li a:hover {
             color: #f2f2f2
         }
         
@@ -271,7 +267,8 @@
         }
         
         #section1,
-        #section2 p {
+        #section2,
+        #section7 p {
             font-size: 1.2em
         }
         
@@ -295,8 +292,15 @@
         }
         
         #section6,
-        #section2 h3 {
+        #section2,
+        #section7 h3 {
             font-size: 1.5em;
+        }
+        
+        #section10 img {
+            height: 90%;
+            width: 90%;
+            text-align: center
         }
         
         .intro p {
@@ -368,30 +372,6 @@
         .button a:hover {
             color: #316f68;
             background-color: #fff
-        }
-        
-        #infoMenu {
-            height: 20px;
-            bottom: 0;
-            width: 100%;
-            text-align: right;
-            font-size: .9em;
-            padding: 8px 0
-        }
-        
-        #infoMenu li a {
-            display: block;
-            margin: 0 22px 0 0;
-            color: #333
-        }
-        
-        #infoMenu li a:hover {
-            text-decoration: underline
-        }
-        
-        #infoMenu li {
-            display: inline-block;
-            position: relative
         }
         
         #examplesList {
@@ -494,6 +474,21 @@
         #five,
         #six h3 {
             align: center
+        }
+        
+        error {}
+        
+        correction {
+            display: none
+        }
+        
+        error.answer {
+            text-decoration: line-through;
+        }
+        
+        correction.answer {
+            background: #2C664F;
+            display: inline;
         }
         
         @media screen and (max-width:990px) {
@@ -650,16 +645,6 @@
             h2 {
                 font-size: 1.1em
             }
-            #infoMenu {
-                text-align: center
-            }
-            #infoMenu ul {
-                display: inline-block;
-                padding: 0
-            }
-            #infoMenu li a {
-                margin: 0 10px 0 0
-            }
         }
         
         @media all and (max-width:480px) {
@@ -681,9 +666,6 @@
             }
             .intro p {
                 font-size: 1em
-            }
-            #infoMenu {
-                bottom: 21px
             }
         }
         
@@ -712,23 +694,6 @@
         }
     </style>
 
-    <script>
-        (function(i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function() {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date();
-            a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-
-        ga('create', 'UA-94005074-1', 'auto');
-        ga('send', 'pageview');
-    </script>
-
     <script type="text/javascript" src="js/echarts.min.js"></script>
     <script src="https://d3js.org/d3.v4.min.js"></script>
 
@@ -749,10 +714,10 @@
     </script>
 
     <ul id="menu">
-        <li data-menuanchor="firstPage" class="active"><a href="#firstPage">First section</a></li>
-        <li data-menuanchor="secondPage"><a href="#secondPage">Second section</a></li>
-        <li data-menuanchor="3rdPage"><a href="#3rdPage">Third section</a></li>
-        <li data-menuanchor="4thpage"><a href="#4thpage">Fourth section</a></li>
+        <li data-menuanchor="top" class="active"><a href="#1">Top</a></li>
+        <li data-menuanchor="bg"><a href="#2">Background</a></li>
+        <li data-menuanchor="sec1"><a href="#4">Section1</a></li>
+        <li data-menuanchor="sec2"><a href="#9">Section2</a></li>
     </ul>
 
     <div id="fullpage">
@@ -760,9 +725,7 @@
         <div class="section" id="section0">
             <h1>From ... to ...</h1>
             <h2>Visualising China's film-script censorship and keyword trend in six years.</h2>
-            <div id="github-stars-button">
-            </div>
-            <div class="button" id="download"><a href="https://github.com/alvarotrigo/fullpage.js/archive/master.zip">Download</a></div><br />
+            <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span><br />
         </div>
         <div class="section" id="section1">
             <div class="row">
@@ -791,7 +754,7 @@
                 <div class="col-md-1">
                 </div>
                 <div class="col-md-5">
-                    <img src="img/dots.jpg" style="width:80%;height:80%">
+                    <img src="img/dots.jpg" style="width:90%;height:90%; margin-top:10%">
                 </div>
                 <div class="col-md-5" style="text-align:left">
                     <h2>Some Big Data</h2><br>
@@ -818,7 +781,7 @@
                 <div class="row">
                     <div class="col-md-2">
                     </div>
-                    <div id="chart1" class="col-md-8" style="margin-right: 5%; width:900px;height:400px;">
+                    <div id="chart1" class="col-md-8" style="margin-right: 5%; width:65%;height:400px;">
                         <script>
                             var myChart = echarts.init(document.getElementById('chart1'));
                             var timeLineData = [2011, 2012, 2013, 2014, 2015, 2016];
@@ -1031,7 +994,7 @@
                 <div class="row">
                     <div class="col-md-2">
                     </div>
-                    <div id="chart2" class="col-md-8" style="margin-left: 5%; width:800px;height:400px;">
+                    <div id="chart2" class="col-md-8" style="margin-left: 5%; width:55%;height:400px;">
                         <script>
                             var myChart = echarts.init(document.getElementById('chart2'));
                             option = {
@@ -1293,25 +1256,120 @@
         <div class="section" id="section7">
             <div>
                 <h2>The Mysterious Content that Would be Crossed</h2>
-
+                <br>
+                <h3><i>an example:</i></h3><br>
+                <div class="row">
+                    <div class="col-md-1">
+                    </div>
+                    <div class="col-md-2">
+                        <h3 style="text-align:right">The Plot:</h3>
+                    </div>
+                    <div class="col-md-7">
+                        <p style="text-align:left">
+                            <error>
+                                "The criminal, knowing that police would set many customs passes on the streets after the robbery, therefore choose to find a safe place in the city instead of slipping away."
+                            </error>
+                        </p>
+                    </div>
+                    <div class="col-md-2">
+                    </div>
+                </div>
+                <br>
+                <button class="btn" id="toggle">Send the plot for review</button>
+                <br><br>
+                <div class="row">
+                    <div class="col-md-1">
+                    </div>
+                    <div class="col-md-2">
+                        <correction>
+                            <h3 style="text-align:right">The Result:</h3>
+                        </correction>
+                    </div>
+                    <div class="col-md-7">
+                        <p style="text-align:left">
+                            <correction>Revision needed: this plot over exaggerates the criminal's ability and makes the police lack of efficiency in front of emergency situation, which is untrue. </correction>
+                        </p>
+                    </div>
+                    <div class="col-md-2">
+                    </div>
+                </div>
+                <br>
+                <br>
             </div>
         </div>
         <div class="section" id="section8">
             <div class="intro">
-                <h1>Easy to use plugin</h1>
-                <p>HTML markup example to define 4 sections.</p>
-                <img data-src="imgs/example2.png" alt="example" height="154" width="494" id="easyToUse" />
+                <h1>"Culture" &amp; "History"</h1>
+                <p>Keywords for certain types films.</p>
             </div>
         </div>
-        <div class="section" id="section9">
-            <div class="intro">
-                <h1>Working On Tablets</h1>
-                <p>
-                    Designed to fit different screen sizes as well as tablet and mobile devices.
-                    <br /><br /><br /><br /><br /><br />
-                </p>
+        <div class="section active" id="section9">
+            <div class="row">
+                <div class="col-md-1">
+                </div>
+                <div class="col-md-5" style="text-align:right">
+                    <br>
+                    <h2>Foreign Co-produced Films' Keywords: <br>the Shift of Focus</h2>
+                    <hr>
+                    <p>Movie stars and pop singers from North Korea has long been loved by Chinese fans. In 2014, after the hot TV series My Love from the Star, many Chinese film companies started to cooperate with North Korean stars.</p><br>
+                    <p>However, that changed after the STARFT put out a series of relugations, banning Korean stars from performing or doing business in China.</p><br>
+                    <p>In 2016, very few names of locations were mentioned in the scripts of foreign co-produced films.</p>
+                </div>
+                <div class="col-md-5">
+                    <br>
+                    <br>
+                    <br>
+                    <img src="img/tb.jpg" style="width:90%;height:90%;text-align:left">
+                </div>
+                <div class="col-md-1">
+                </div>
             </div>
-            <img data-src="imgs/tablets.png" alt="tablets" height="372" width="843" />
+        </div>
+        <div class="section" id="section10">
+            <div>
+                <h2>Most Frequently Used Words in Documentories by Years</h2>
+                <br>
+                <div class="row">
+                    <div class="col-md-2" style="margin-left:8%">
+                        <div class="btn-toolbar btn-group-vertical" role="toolbar" aria-label="Toolbar with button groups">
+                            <div class="btn-group mr-2" role="group">
+                                <button type="button" class="btn btn-success" id="abtn">2014</button>
+                                <button type="button" class="btn btn-success" id="bbtn">2015</button>
+                                <button type="button" class="btn btn-success" id="cbtn">2016</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="row">
+                            <div class="col-md-2">
+                            </div>
+                        </div>
+                        <div class="col-md-10" style="margin-right:3%">
+                            <div id='2014'>
+                                <img src="img/cloud1.png">
+                            </div>
+                            <div id="2015">
+                                <img src="img/cloud2.png">
+                            </div>
+                            <div id='2016'>
+                                <img src="img/cloud3.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section" id="section11">
+            <div class="intro">
+                <h1>The End</h1>
+                <p>Credits: Movie by Focus from the Noun Project; Piktochart; Tagxedo
+                    <br />
+                </p>
+                <p>Sources: <a href="http://dy.chinasarft.gov.cn/shanty.deploy/catalog.nsp?id=0129dffcccb1015d402881cd29de91ec&pageIndex=1" target="_blank">SARFT Announcements of Film-Script Review Results</a>, <a href="http://www.chinafilm.org.cn/Item/list.asp?id=1688&page=1"
+                        target="_blank">Chinafilm.org</a></p>
+            </div>
         </div>
     </div>
 
@@ -1323,11 +1381,14 @@
     <script type="text/javascript">
         $(document).ready(function() {
             $('#fullpage').fullpage({
-                sectionsColor: ['#14142E', '#263858', '#14142E', '#263858', '#14142E', '#263858', '#14142E', '#263858', '#14142E', '#263858'],
-                anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
+                sectionsColor: ['#14142E', '#263858', '#14142E', '#263858', '#14142E', '#263858', '#14142E', '#263858', '#14142E', '#263858', '#14142E', '#263858'],
+                anchors: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
                 menu: '#menu',
+                navigation: true,
+                navigationPosition: 'right',
+                navigationTooltips: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
                 css3: true,
-                scrollingSpeed: 800
+                scrollingSpeed: 600
             });
 
             $('#showExamples').click(function(e) {

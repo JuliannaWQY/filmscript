@@ -1,3 +1,4 @@
+//section buttons
 var one = document.getElementById('one')
 var two = document.getElementById('two')
 var three = document.getElementById('three')
@@ -14,7 +15,6 @@ six.style.display = 'none'
 
 
 $("button").click(function() {
-    //console.log(this.id); // or alert($(this).attr('id'));
     if (this.id == '1btn') {
         one.style.display = 'block'
         two.style.display = 'none'
@@ -66,22 +66,53 @@ $("button").click(function() {
 
 });
 
-// function myFunction1() {
-//     $
-//     x =
-//         if (one.style.display === 'none') {
-//             one.style.display = 'block';
-//             two.style.display = 'none'
-//             three.style.display = 'none'
-//             four.style.display = 'none'
-//             five.style.display = 'none'
-//             six.style.display = 'none'
-//         }
-// }
 
-// function myFunction2() {
-//     var x = document.getElementById('chart2');
-//     if (x.style.display === 'none') {
-//         x.style.display = 'block';
-//         chart1.style.display = 'none';
-//     }
+var first = document.getElementById('2014')
+var second = document.getElementById('2015')
+var third = document.getElementById('2016')
+
+first.style.display = 'block'
+second.style.display = 'none'
+third.style.display = 'none'
+
+
+$("button").click(function() {
+    if (this.id == 'abtn') {
+        first.style.display = 'block'
+        second.style.display = 'none'
+        third.style.display = 'none'
+    };
+    if (this.id == 'bbtn') {
+        first.style.display = 'none'
+        second.style.display = 'block'
+        third.style.display = 'none'
+    };
+    if (this.id == 'cbtn') {
+        first.style.display = 'none'
+        second.style.display = 'none'
+        third.style.display = 'block'
+    };
+});
+
+// The toggle button
+$(function() {
+    var showAnswer = function() {
+        $('error').addClass('answer');
+        $('correction').addClass('answer');
+    }
+    var hideAnswer = function() {
+        $('error').removeClass('answer');
+        $('correction').removeClass('answer');
+    }
+    var isAnswerShown = false;
+    var toggleAnswer = function() {
+        if (isAnswerShown) {
+            hideAnswer();
+            isAnswerShown = false;
+        } else {
+            showAnswer();
+            isAnswerShown = true;
+        }
+    }
+    $('#toggle').click(toggleAnswer);
+})
