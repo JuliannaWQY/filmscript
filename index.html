@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>China Film-Script Data Analysis, 2011-16 - Data Visualization Project</title>
     <meta name="author" content="JuliannaW" />
-    <meta name="description" content="The film-script censorship and the keywords of Chinese films" />
+    <meta name="description" content="Chinese film-script censorship data analysis" />
     <meta name="keywords" content="movies,china,script,censorship,data,journalism,data journalism,visualization" />
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta property="og:title" content="China Film-Script Data Analysis - Data Visualization Project">
@@ -41,7 +41,6 @@
     <meta name="theme-color" content="#ffffff">
 
     <style>
-        #examplesList,
         caption,
         th {
             text-align: left
@@ -217,7 +216,6 @@
             color: #000
         }
         
-        #donations a:hover,
         #menu li.active a {
             color: #fff
         }
@@ -232,13 +230,8 @@
             display: block
         }
         
-        #examplesList ul,
         #menu {
             padding: 0
-        }
-        
-        #examplesList ul li a:hover {
-            color: #f2f2f2
         }
         
         #menu {
@@ -247,14 +240,6 @@
             height: 40px;
             width: 100%;
             margin: 0
-        }
-        
-        #usedBy {
-            background-image: url(img/used-by-fullpage.png?v=2);
-            margin: 50px auto 0;
-            display: block;
-            height: 127px;
-            width: 402px
         }
         
         #section0 {
@@ -374,72 +359,6 @@
             background-color: #fff
         }
         
-        #examplesList {
-            display: none;
-            background: #282828;
-            -webkit-border-radius: 6px;
-            -moz-border-radius: 6px;
-            border-radius: 6px;
-            padding: 20px;
-            float: left;
-            position: absolute;
-            bottom: 29px;
-            right: 0;
-            width: 822px
-        }
-        
-        #examplesList ul li {
-            display: block;
-            margin: 5px 0
-        }
-        
-        #examplesList ul li a {
-            color: #BDBDBD;
-            margin: 0
-        }
-        
-        #examplesList .column {
-            float: left;
-            margin: 0 20px 0 0
-        }
-        
-        #examplesList h3 {
-            color: #f2f2f2;
-            font-size: 1.2em;
-            margin: 0 0 15px;
-            border-bottom: 1px solid rgba(0, 0, 0, .4);
-            -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, .1);
-            -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, .1);
-            box-shadow: 0 1px 0 rgba(255, 255, 255, .1);
-            padding: 0 0 5px
-        }
-        
-        #donations a {
-            color: #333;
-            color: rgba(0, 0, 0, .5);
-            font-size: 80%
-        }
-        
-        #supportedBy {
-            position: absolute;
-            left: 30px;
-            bottom: 30px;
-            z-index: 101
-        }
-        
-        #supportedBy a img {
-            display: block;
-            margin: 0;
-            border: 0
-        }
-        
-        #supportedBy div {
-            margin: 0 0 4px;
-            display: block;
-            font-size: 13px;
-            text-align: left
-        }
-        
         #section0 #logo {
             max-width: 282px
         }
@@ -476,9 +395,17 @@
             align: center
         }
         
+        #section7 h3 {
+            text-align: right
+        }
+        
         error {}
         
         correction {
+            display: none
+        }
+        
+        #hide {
             display: none
         }
         
@@ -489,6 +416,18 @@
         correction.answer {
             background: #2C664F;
             display: inline;
+        }
+        
+        #chart1 {
+            margin-right: 5%;
+            width: 65%;
+            height: 400px;
+        }
+        
+        #chart2 {
+            margin-left: 3%;
+            width: 60%;
+            height: 400px;
         }
         
         @media screen and (max-width:990px) {
@@ -502,31 +441,12 @@
                 max-width: 250px!important;
                 height: auto!important
             }
-            #section0 #usedBy {
-                padding: 10px 0 0;
-                height: 60px;
-                width: 398px;
-                margin-top: 40px;
-                background-size: cover
-            }
-            #section3 img {
-                bottom: -67px
-            }
         }
         
         @media screen and (max-height:680px) {
-            #section0 #usedBy {
-                margin-top: 15px;
-                height: 41px;
-                width: 308px;
-                background-size: cover
-            }
             #section0 #logo {
                 max-width: 200px!important;
                 height: auto!important
-            }
-            #section3 img {
-                bottom: -100px
             }
         }
         
@@ -540,12 +460,6 @@
             }
             h2 {
                 font-size: 1.3em
-            }
-            #donations a {
-                font-size: 57%
-            }
-            #section3 img {
-                bottom: -180px
             }
             .intro p {
                 font-size: 1.1em
@@ -566,17 +480,6 @@
         }
         
         @media all and (max-width:890px) {
-            #twitter-widget-0 {
-                left: 20px;
-                top: 63px
-            }
-            #section3 img {
-                margin: 0 auto;
-                left: 0;
-                max-width: 600px;
-                height: auto!important;
-                right: 0
-            }
             #section1 #slidersImg {
                 max-width: 462px;
                 height: auto!important
@@ -600,13 +503,6 @@
             #menu li a,
             #menu li.active a {
                 padding: 9px 12px
-            }
-            #section3 img {
-                margin: 0 auto;
-                left: 0;
-                max-width: 450px;
-                height: auto!important;
-                right: 0
             }
             #section2 img {
                 margin: 20px 0 0
@@ -669,27 +565,32 @@
             }
         }
         
-        @media screen and (max-width:890px) and (max-height:680px) {
-            #section3 img {
-                bottom: -50px
+        @media screen and (max-width: 768px) {
+            p {
+                font-size: 1em;
             }
-        }
-        
-        @media screen and (max-width:650px) and (max-height:680px) {
-            #section3 img {
-                bottom: 0
+            #section2 p {
+                font-size: 1em
             }
-        }
-        
-        @media screen and (max-width:580px) and (max-height:580px) {
-            #section3 img {
-                bottom: -50px
+            #emphasizs {
+                font-size: 1.5em
             }
-        }
-        
-        @media screen and (max-width:500px) and (max-height:500px) {
-            #section3 img {
-                bottom: 0
+            #fullpage {
+                width: 350px;
+            }
+            #section7 h3 {
+                text-align: center
+            }
+            #hide {
+                display: block;
+                text-align: center
+            }
+            #show {
+                display: none
+            }
+            #chart1 {
+                width: 200px;
+                height: 200px
             }
         }
     </style>
@@ -723,9 +624,8 @@
     <div id="fullpage">
 
         <div class="section" id="section0">
-            <h1>From ... to ...</h1>
+            <h1>History, Culture and Tomb</h1>
             <h2>Visualising China's film-script censorship and keyword trend in six years.</h2>
-            <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span><br />
         </div>
         <div class="section" id="section1">
             <div class="row">
@@ -781,7 +681,7 @@
                 <div class="row">
                     <div class="col-md-2">
                     </div>
-                    <div id="chart1" class="col-md-8" style="margin-right: 5%; width:65%;height:400px;">
+                    <div id="chart1" class="col-md-8">
                         <script>
                             var myChart = echarts.init(document.getElementById('chart1'));
                             var timeLineData = [2011, 2012, 2013, 2014, 2015, 2016];
@@ -811,8 +711,6 @@
                                     2015: [NaN, 2, NaN, 2, NaN, NaN],
                                     2016: [2, 1, 1, 4, NaN, NaN],
                                 },
-
-
                                 option = {
                                     baseOption: {
                                         title: {
@@ -979,6 +877,12 @@
                                 });
                             }
                             myChart.setOption(option)
+                            $(window).on('resize', function() {
+                                if (myChart != null && myChart != undefined) {
+                                    myChart.resize();
+                                    console.log(myChart);
+                                }
+                            });
                         </script>
                     </div>
                     <div class="col-md-2">
@@ -991,10 +895,11 @@
         <div class="section" id="section5">
             <div class="intro">
                 <h2>Film-Scripts in Types, 2011-16</h2>
+                <br>
                 <div class="row">
                     <div class="col-md-2">
                     </div>
-                    <div id="chart2" class="col-md-8" style="margin-left: 5%; width:55%;height:400px;">
+                    <div id="chart2" class="col-md-8">
                         <script>
                             var myChart = echarts.init(document.getElementById('chart2'));
                             option = {
@@ -1107,6 +1012,12 @@
                                 }]
                             };
                             myChart.setOption(option)
+                            $(window).on('resize', function() {
+                                if (myChart != null && myChart != undefined) {
+                                    myChart.resize();
+                                    console.log(myChart);
+                                }
+                            });
                         </script>
                     </div>
                     <div class="col-md-2">
@@ -1121,7 +1032,7 @@
                 <br>
                 <div class="row">
                     <div class="col-md-2" style="margin-left:8%">
-                        <div class="btn-toolbar btn-group-vertical" role="toolbar" aria-label="Toolbar with button groups">
+                        <div class="btn-toolbar btn-group-vertical" id="show" role="toolbar" aria-label="Toolbar with button groups">
                             <div class="btn-group mr-2" role="group">
                                 <button type="button" class="btn btn-success" id="1btn">1</button>
                                 <button type="button" class="btn btn-success" id="2btn">2</button>
@@ -1130,6 +1041,17 @@
                                 <button type="button" class="btn btn-success" id="5btn">5</button>
                                 <button type="button" class="btn btn-success" id="6btn">6</button>
                             </div>
+                        </div>
+                        <div class="btn-toolbar btn-group" id="hide" role="toolbar" aria-label="Toolbar with button groups">
+                            <div class="btn-group mr-2" role="group">
+                                <button type="button" class="btn btn-success" id="1btn">1</button>
+                                <button type="button" class="btn btn-success" id="2btn">2</button>
+                                <button type="button" class="btn btn-success" id="3btn">3</button>
+                                <button type="button" class="btn btn-success" id="4btn">4</button>
+                                <button type="button" class="btn btn-success" id="5btn">5</button>
+                                <button type="button" class="btn btn-success" id="6btn">6</button>
+                            </div>
+                            <br><br>
                         </div>
                     </div>
                     <div class="col-md-8">
@@ -1257,12 +1179,12 @@
             <div>
                 <h2>The Mysterious Content that Would be Crossed</h2>
                 <br>
-                <h3><i>an example:</i></h3><br>
+                <h3 style="text-align:center"><i>an example:</i></h3><br>
                 <div class="row">
                     <div class="col-md-1">
                     </div>
                     <div class="col-md-2">
-                        <h3 style="text-align:right">The Plot:</h3>
+                        <h3>The Plot:</h3>
                     </div>
                     <div class="col-md-7">
                         <p style="text-align:left">
@@ -1282,7 +1204,7 @@
                     </div>
                     <div class="col-md-2">
                         <correction>
-                            <h3 style="text-align:right">The Result:</h3>
+                            <h3>The Result:</h3>
                         </correction>
                     </div>
                     <div class="col-md-7">
@@ -1331,12 +1253,20 @@
                 <br>
                 <div class="row">
                     <div class="col-md-2" style="margin-left:8%">
-                        <div class="btn-toolbar btn-group-vertical" role="toolbar" aria-label="Toolbar with button groups">
+                        <div class="btn-toolbar btn-group-vertical" id="show" role="toolbar" aria-label="Toolbar with button groups">
                             <div class="btn-group mr-2" role="group">
                                 <button type="button" class="btn btn-success" id="abtn">2014</button>
                                 <button type="button" class="btn btn-success" id="bbtn">2015</button>
                                 <button type="button" class="btn btn-success" id="cbtn">2016</button>
                             </div>
+                        </div>
+                        <div class="btn-toolbar btn-group" id="hide" role="toolbar" aria-label="Toolbar with button groups">
+                            <div class="btn-group mr-2" role="group">
+                                <button type="button" class="btn btn-success" id="abtn">2014</button>
+                                <button type="button" class="btn btn-success" id="bbtn">2015</button>
+                                <button type="button" class="btn btn-success" id="cbtn">2016</button>
+                            </div>
+                            <br>
                         </div>
                     </div>
                     <div class="col-md-8">
@@ -1389,16 +1319,6 @@
                 navigationTooltips: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
                 css3: true,
                 scrollingSpeed: 600
-            });
-
-            $('#showExamples').click(function(e) {
-                e.stopPropagation();
-                e.preventDefault();
-                $('#examplesList').toggle();
-            });
-
-            $('html').click(function() {
-                $('#examplesList').hide();
             });
         });
     </script>
