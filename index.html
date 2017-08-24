@@ -592,8 +592,10 @@
                 display: none
             }
             #chart1 {
-                width: 200px;
-                height: 200px
+                width: 100%;
+            }
+            #chart2 {
+                width: 100%;
             }
         }
     </style>
@@ -688,7 +690,7 @@
                     </div>
                     <div id="chart1" class="col-md-8">
                         <script>
-                            var myChart = echarts.init(document.getElementById('chart1'));
+                            var myChart1 = echarts.init(document.getElementById('chart1'));
                             var timeLineData = [2011, 2012, 2013, 2014, 2015, 2016];
                             var yData = ['Special Usage Films', 'Feature Films', 'Foreign co-production \n Films', 'Documentories', 'Scientific & Educational \n  Films', 'Cartoon'];
                             var WLData = ['Approved', 'Approved with Revision', 'Approved in Principle'];
@@ -881,17 +883,8 @@
                                     }]
                                 });
                             }
-                            myChart.setOption(option)
-                                // window.onresize = myChart.resize;
-                            $("#dcDataUseStatisticContainer").resize(function() {
-                                    $(myChart).resize();
-                                })
-                                // $(window).on('resize', function() {
-                                //     if (myChart != null && myChart != undefined) {
-                                //         myChart.resize();
-                                //         console.log(myChart);
-                                //     }
-                                // });
+                            myChart1.setOption(option)
+                            window.onresize = myChart1.resize
                         </script>
                     </div>
                     <div class="col-md-2">
@@ -1021,12 +1014,7 @@
                                 }]
                             };
                             myChart.setOption(option)
-                            $(window).on('resize', function() {
-                                if (myChart != null && myChart != undefined) {
-                                    myChart.resize();
-                                    console.log(myChart);
-                                }
-                            });
+                            window.onresize = myChart.resize
                         </script>
                     </div>
                     <div class="col-md-2">
