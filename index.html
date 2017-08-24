@@ -242,7 +242,9 @@
             margin: 0
         }
         
-        #section0 {
+        #section0,
+        #section3,
+        #section8 {
             background: url(img/bg.jpg) no-repeat center center;
             background-size: cover
         }
@@ -879,12 +881,16 @@
                                 });
                             }
                             myChart.setOption(option)
-                            $(window).on('resize', function() {
-                                if (myChart != null && myChart != undefined) {
-                                    myChart.resize();
-                                    console.log(myChart);
-                                }
-                            });
+                                // window.onresize = myChart.resize;
+                            $("#dcDataUseStatisticContainer").resize(function() {
+                                    $(myChart).resize();
+                                })
+                                // $(window).on('resize', function() {
+                                //     if (myChart != null && myChart != undefined) {
+                                //         myChart.resize();
+                                //         console.log(myChart);
+                                //     }
+                                // });
                         </script>
                     </div>
                     <div class="col-md-2">
